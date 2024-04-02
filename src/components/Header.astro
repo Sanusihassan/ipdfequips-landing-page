@@ -1,0 +1,8 @@
+---
+import Navbar from "../NavBar/NavBar.tsx";
+const { lang } = Astro.props;
+---
+
+<header>
+    <Navbar client:idle path="" lang={lang ? lang : ""} />
+</header>

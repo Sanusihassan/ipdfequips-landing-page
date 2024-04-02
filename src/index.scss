@@ -1,0 +1,269 @@
+@import "./NavBar/scss/navbar";
+
+%debug {
+  outline: 1px solid;
+}
+
+a {
+  text-decoration: none;
+}
+
+@import "./scss/minxins";
+@import "./scss/placeholders";
+
+$pdf-color: #fc271c;
+$color-map: (
+  "merge-pdf": $pdf-color,
+  "split-pdf": #fd7e14,
+  "compress-pdf": #28a745,
+  "pdf-to-powerpoint": #c13b1b,
+  "jpg-to-pdf": #f1c40f,
+  "word-to-pdf": #1b5ebe,
+  "powerpoint-to-pdf": #c13b1b,
+  "excel-to-pdf": #10793f,
+  "web-to-pdf": #0984e3,
+  "pdf-to-text": #4493e1,
+  "html-to-pdf": rgb(228, 77, 38),
+  "pdf-to-jpg": #f1c40f,
+  "pdf-to-word": #1b5ebe,
+  "pdf-to-excel": #10793f,
+  "pdf-to-pdf-a": #000000,
+  "pdf-to-html": rgb(228, 77, 38),
+  "pdf-to-markdown": #000000,
+  "markdown-to-pdf": #000000,
+  "translate-pdf": #185abc,
+  "lock-pdf": #2980b9,
+  "unlock-pdf": #3498db,
+  "ocr-pdf": #006266,
+  "add-watermark": #e55039,
+  "rotate-pdf": #10ac84,
+  "number-pdf": #b71540,
+  "organize-pdf": #6c5ce7,
+);
+
+:root {
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --green: #28a745;
+}
+
+// html,
+// body,
+// #__next,
+// .tools-page {
+//   height: 100%;
+// }
+
+body {
+  @include ar-wrapper {
+    text-align: right !important;
+  }
+
+  font-family: "Raleway",
+  sans-serif;
+}
+
+.tools-page {
+  min-height: fit-content;
+}
+
+.h-5,
+.icon {
+  height: 1em;
+}
+
+.w-5,
+.icon {
+  width: 1em;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+  object-position: center;
+}
+
+.object-fit-contain {
+  object-fit: contain;
+  object-position: center;
+}
+
+.img-fluid-custom {
+  max-width: 100%;
+  height: 100%;
+}
+
+.bdi,
+a.dropdown-item {
+  unicode-bidi: isolate;
+}
+
+.html {
+  color: rgb(228, 77, 38);
+}
+
+.web {
+  color: #0984e3;
+}
+
+.text {
+  color: lighten(#2e86de, 5%);
+}
+
+#basic-nav-dropdown {
+  padding-left: 1.5rem !important;
+}
+
+@media (min-width: 992px) {
+  .drop-down-container {
+    flex-wrap: nowrap !important;
+  }
+}
+
+
+/* landing page layout */
+
+@import "./scss/landing-page";
+
+/* hero section styles */
+
+/* features section */
+
+/* tools page */
+
+.dropdown-item {
+
+  &.active,
+  &:active {
+    background-color: initial !important;
+    color: #212529 !important;
+  }
+}
+
+.container {
+  @include extend("container");
+
+  .col {
+    @include extend("col");
+
+    &.col-3 {
+      @include extend("col-12 col-md-auto text-center");
+    }
+
+    &.copy-right-row {
+      @include extend("col-md-6 row align-items-center flex-nowrap mb-xs-3");
+    }
+  }
+
+  .row-1 {
+    @include extend("mb-5 mb-3 row");
+  }
+
+  .row-2 {
+    @include extend("border-top py-4 row justify-content-center");
+
+    * {
+      width: unset;
+
+      &.copyright-row {
+        @include extend("col col-md-6 m-0 p-0 row align-items-center flex-nowrap mb-xs-3");
+      }
+
+      &.terms-col {
+        @include extend("col col-md-6");
+      }
+    }
+  }
+
+  .list-group {
+    @include extend("list-unstyled list-group");
+
+    .link {
+      @include extend("list-group-item list-group-item-action border-0 px-2 py-2");
+    }
+  }
+}
+
+.m-0 {
+  @include extend("m-0");
+}
+
+footer {
+  @include extend("py-3 outline-1");
+
+  @include ar-wrapper {
+    @include extend("text-right");
+  }
+
+  .copyright-row {
+
+    .lang-dropdown {
+      flex: 0 1 59%;
+      background-color: transparent !important;
+
+      #custom-lang-dropdown {
+        width: 100%;
+
+        .dropdown-wrapper {
+          width: 55%;
+
+          @include xs {
+            width: 100%;
+          }
+        }
+
+        margin: 0 !important;
+
+        .drop-down-container {
+          left: unset !important;
+          right: unset !important;
+        }
+      }
+    }
+
+    .copyright-text {
+      // mb-0 py-0
+      @include extend("text-muted mb-0 py-0");
+    }
+
+    @include xs {
+      margin-bottom: 1em;
+      justify-content: space-between;
+
+      .copyright-text,
+      .lang-dropdown {
+        flex: 0 1 49%;
+      }
+
+      .copyright-text {
+        :not(:lang(ar)) & {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .dropdown-wrapper.drop-down-container {
+    top: unset !important;
+    bottom: 42px;
+  }
+
+  .terms-col {
+    @include extend("col-md-6 m-0 p-0");
+  }
+
+  .terms-row {
+    @include extend("list-unstyled mb-0 d-flex justify-content-end align-items-center h-100");
+
+    .privacy-policy {
+      @include extend("mx-3");
+
+      a {
+        @include extend("text-muted");
+      }
+    }
+
+    @include xs {
+      justify-content: space-between !important;
+    }
+  }
+}

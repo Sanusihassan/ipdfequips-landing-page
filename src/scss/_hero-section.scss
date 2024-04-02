@@ -1,0 +1,65 @@
+.hero-section {
+  min-height: 60vh;
+
+  .hero-row {
+    @include extend("row justify-content-center align-items-center");
+  }
+
+  .hero-text-wrapper {
+    @include extend("col-md-8 text-center");
+
+    .hero-title {
+      @include extend("text-white");
+      font-weight: 400;
+      font-size: 3rem;
+      font-size: clamp(1rem, 2vw + 2rem, 3.5rem);
+    }
+
+    .hero-description {
+      @include extend("lead text-white");
+      font-size: 1.43rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    min-height: 60vh;
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bg-gradient {
+  background: linear-gradient(to right, $pdf-color, black);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+
+
+
+
+.hero-section {
+  padding: 50px 0;
+
+  .row {
+    justify-content: center;
+    align-items: center;
+
+    .col-md-8 {
+      text-align: center;
+
+      .hero-title {
+        font-size: 2.5rem; // Adjust font size as needed
+        color: #fff; // Adjust text color as needed
+      }
+
+      .hero-description {
+        font-size: 1.5rem; // Adjust font size as needed
+        color: #fff; // Adjust text color as needed
+      }
+    }
+  }
+}

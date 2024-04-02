@@ -1,0 +1,20 @@
+.landing-page {
+    @import "./hero-section";
+    @import "./features-section";
+
+    .why-us {
+        @include extend("py-3");
+
+        .content-wrapper {
+            @include extend("text-center py-5");
+
+            .title {
+                @include extend("display-4");
+            }
+
+            .description {
+                @include extend("lead")
+            }
+        }
+    }
+}

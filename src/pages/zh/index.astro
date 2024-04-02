@@ -1,0 +1,65 @@
+---
+const lang = "zh";
+import { landing_page, tool, footer } from "../../content/content-zh";
+import Header from "../../components/Header.astro";
+import { OpenGraph } from "pdfequips-open-graph/OpenGraph";
+import Footer from "../../components/Footer";
+import LandingPage from "../../components/LandingPage";
+import "../../index.scss";
+---
+
+<html lang={lang} dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+		<meta name="generator" content={Astro.generator} />
+		<title>PDFEquips - 您的在线 PDF 工具中心</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="description"
+			content="强大的PDF工具，轻松管理文档。 只需点击几下，您就可以合并、分割、压缩、转换、旋转、打开文件以及添加水印。"
+		/>
+		<link rel="icon" href="/logo.png" />
+		<meta
+			name="keywords"
+			content="PDF 工具，转换为 PDF、JPG 为 PDF、WORD 为 PDF、POWERPOINT 为 PDF、EXCEL 为 PDF、HTML 为 PDF、从 PDF 转换、PDF 为 JPG、PDF 为 WORD、PDF 为 POWERPOINT、PDF 为 EXCEL、PDF 为 PDF/A、PDF 到文本、合并 PDF、压缩 PDF。"
+		/>
+		<OpenGraph
+			ogDescription="PDFEquips - 免费 PDF 工具 | 使用 PDFEquips.com 简化您的 PDF 需求"
+			ogUrl="https://www.pdfequips.com/zh/"
+			ogLocale="zh_CN"
+			ogImage="https://www.pdfequips.com/pdfequips-zh.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			cross-origin=""
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- <script
+			type="application/ld+json"
+			dangerouslySetInnerHTML={{
+				__html: JSON.stringify(websiteSchema),
+			}}></script> -->
+		<meta http-equiv="Content-Language" content={lang} />
+		<!-- <meta name="google-adsense-account" content="ca-pub-7391414384206267" />
+				<script
+					async
+					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7391414384206267"
+					crossOrigin="anonymous"
+				></script> -->
+		<meta
+			name="ahrefs-site-verification"
+			content="a532671b5b7f09bad30e7e65542ecf2f8f28a1ef5a25b2bec358924427540367"
+		/>
+	</head>
+	<body>
+		<Header lang={lang} />
+		<LandingPage landing_page={landing_page} tool={tool} lang={lang} />
+		<Footer client:load footer={footer} lang={lang} />
+	</body>
+</html>

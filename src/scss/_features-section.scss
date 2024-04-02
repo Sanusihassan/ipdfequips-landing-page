@@ -1,0 +1,144 @@
+.features-section {
+  @include extend("py-3");
+
+  .title {
+    @include extend("display-4 text-center");
+  }
+
+  .descripiton {
+    @include extend("lead text-center");
+  }
+
+  // .row {
+  //     margin: 0;
+
+  //     @media (max-width: 600px) {
+  //         gap: 15px;
+  //     }
+  // }
+
+  // i want this grid container to be responsive i.e make the items automatic i.e // md={3} sm={6}
+  .features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include sm {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include xs {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    gap: 10px;
+    justify-content: stretch;
+
+    .feature {
+      align-self: stretch;
+
+      .link {
+        @include extend("text-decoration-none text-muted text-reset");
+      }
+
+
+
+      .text-decoration-none.text-dark {
+
+        &,
+        .card {
+          height: 100%;
+        }
+
+        // outline: 1px solid;
+        // display: flex;
+        // flex-flow: column;
+        // align-items: stretch;
+
+        // @include extend("d-flex flex-column align-items-stretch");
+      }
+    }
+  }
+
+  .feature {
+    @media (max-width: 600px) {
+      padding: 0;
+    }
+  }
+
+  .feature-card {
+    transition: background-color 0.3s ease-in-out;
+    @include extend("card border-0");
+
+    .card-body {
+      @include extend("card-body");
+    }
+
+    .card-title {
+      @include extend("card-title h5");
+    }
+
+    .card-text {
+      @include extend("card-text");
+    }
+
+    @media (max-width: 600px) {
+      text-align: center;
+      justify-content: center;
+    }
+
+    &:hover {
+      background-color: #f2f2f2;
+      transform: scale(1.001);
+
+      @each $key, $color in $color-map {
+        &.#{$key} {
+          box-shadow: -0.3px -0.3px 3px 0.3px darken($color, 20%) !important;
+        }
+      }
+    }
+
+    .feature-icon {
+      display: flex;
+      @include extend("position-relative");
+
+      @media (max-width: 600px) {
+        justify-content: center;
+      }
+
+      margin-bottom: 1rem;
+
+      svg {
+        width: 4em;
+        height: 4em;
+        padding: 0.5em;
+      }
+
+      .ai {
+        margin-left: auto;
+      }
+    }
+
+    & {
+      transition: box-shadow 0.2s ease-in-out;
+      cursor: pointer;
+    }
+
+    .feature-icon svg {
+      transition: transform 0.1s ease-in-out;
+    }
+
+    &:hover .feature-icon svg {
+      transform: scale(1.1);
+    }
+  }
+
+  .column {
+
+    &:first-child,
+    &:nth-child(5) {
+      margin-bottom: 15px;
+    }
+
+    padding-left: 0 !important;
+  }
+}
