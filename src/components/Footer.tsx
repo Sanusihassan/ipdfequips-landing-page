@@ -22,13 +22,12 @@ const Footer = ({ footer, lang }: { footer: footer; lang: string }) => {
       <div className="container">
         <div className="row-1">
           <div className="col">
-            <h4>{nav_content.convert_to_pdf}</h4>
+            <div className="_h4">{nav_content.convert_to_pdf}</div>
             <ul className="list-group">
               <li>
                 <a
                   href={`https://www.pdfequips.com/${lang == "" ? "" : lang + "/"
-                    }jpg-to-pdf
-                  `}
+                    }jpg-to-pdf/`}
                   className="link"
                 >
                   {nav_content.convert_to.jpg_to_pdf}
@@ -37,8 +36,7 @@ const Footer = ({ footer, lang }: { footer: footer; lang: string }) => {
               <li>
                 <a
                   href={`https://www.pdfequips.com/${lang == "" ? "" : lang + "/"
-                    }word-to-pdf
-                  `}
+                    }word-to-pdf/`}
                   className="link"
                 >
                   {nav_content.convert_to.word_to_pdf}
@@ -47,8 +45,7 @@ const Footer = ({ footer, lang }: { footer: footer; lang: string }) => {
               <li>
                 <a
                   href={`https://www.pdfequips.com/${lang == "" ? "" : lang + "/"
-                    }powerpoint-to-pdf
-                  `}
+                    }powerpoint-to-pdf/`}
                   className="link"
                 >
                   {nav_content.convert_to.powerpoint_to_pdf}
@@ -57,8 +54,7 @@ const Footer = ({ footer, lang }: { footer: footer; lang: string }) => {
               <li>
                 <a
                   href={`https://www.pdfequips.com/${lang == "" ? "" : lang + "/"
-                    }excel-to-pdf
-                  `}
+                    }excel-to-pdf/`}
                   className="link"
                 >
                   {nav_content.convert_to.excel_to_pdf}
@@ -67,8 +63,7 @@ const Footer = ({ footer, lang }: { footer: footer; lang: string }) => {
               <li>
                 <a
                   href={`https://www.pdfequips.com/${lang == "" ? "" : lang + "/"
-                    }html-to-pdf
-                  `}
+                    }html-to-pdf/`}
                   className="link"
                 >
                   {nav_content.convert_to.html_to_pdf}
@@ -77,13 +72,12 @@ const Footer = ({ footer, lang }: { footer: footer; lang: string }) => {
             </ul>
           </div>
           <div className="col">
-            <h4>{nav_content.convert_from_pdf}</h4>
+            <h3 className="_h4">{nav_content.convert_from_pdf}</h3>
             <ul className="list-unstyled list-group">
               <li>
                 <a
                   href={`https://www.pdfequips.com/${lang == "" ? "" : lang + "/"
-                    }pdf-to-jpg
-                  `}
+                    }pdf-to-jpg/`}
                   className="link"
                 >
                   {nav_content.convert_from.pdf_to_jpg}
@@ -92,8 +86,7 @@ const Footer = ({ footer, lang }: { footer: footer; lang: string }) => {
               <li>
                 <a
                   href={`https://www.pdfequips.com/${lang == "" ? "" : lang + "/"
-                    }pdf-to-word
-                  `}
+                    }pdf-to-word/`}
                   className="link"
                 >
                   {nav_content.convert_from.pdf_to_word}
@@ -102,8 +95,7 @@ const Footer = ({ footer, lang }: { footer: footer; lang: string }) => {
               <li>
                 <a
                   href={`https://www.pdfequips.com/${lang == "" ? "" : lang + "/"
-                    }pdf-to-powerpoint
-                  `}
+                    }pdf-to-powerpoint/`}
                   className="link"
                 >
                   {nav_content.convert_from.pdf_to_powerpoint}
@@ -112,8 +104,7 @@ const Footer = ({ footer, lang }: { footer: footer; lang: string }) => {
               <li>
                 <a
                   href={`https://www.pdfequips.com/${lang == "" ? "" : lang + "/"
-                    }pdf-to-excel
-                  `}
+                    }pdf-to-excel/`}
                   className="link"
                 >
                   {nav_content.convert_from.pdf_to_excel}
@@ -122,8 +113,7 @@ const Footer = ({ footer, lang }: { footer: footer; lang: string }) => {
               <li>
                 <a
                   href={`https://www.pdfequips.com/${lang == "" ? "" : lang + "/"
-                    }pdf-to-pdf-a
-                  `}
+                    }pdf-to-pdf-a/`}
                   className="link"
                 >
                   {nav_content.convert_from.pdf_to_pdf_a}
@@ -132,8 +122,7 @@ const Footer = ({ footer, lang }: { footer: footer; lang: string }) => {
               <li>
                 <a
                   href={`https://www.pdfequips.com/${lang == "" ? "" : lang + "/"
-                    }pdf-to-text
-                  `}
+                    }pdf-to-text/`}
                   className="link"
                 >
                   {nav_content.convert_from.pdf_to_text}
@@ -147,8 +136,7 @@ const Footer = ({ footer, lang }: { footer: footer; lang: string }) => {
               <li>
                 <a
                   href={`https://www.pdfequips.com/${lang == "" ? "" : lang + "/"
-                    }compress-pdf
-                  `}
+                    }compress-pdf/`}
                   className="link"
                 >
                   {nav_content.compress}
@@ -157,8 +145,7 @@ const Footer = ({ footer, lang }: { footer: footer; lang: string }) => {
               <li>
                 <a
                   href={`https://www.pdfequips.com/${lang == "" ? "" : lang + "/"
-                    }merge-pdf
-                  `}
+                    }merge-pdf/`}
                   className="link"
                 >
                   {nav_content.merge}
@@ -176,7 +163,7 @@ const Footer = ({ footer, lang }: { footer: footer; lang: string }) => {
               <LanguageDropdown id="custom-lang-dropdown" />
             </nav>
             <p className="copyright-text col text-muted mb-0 py-0">
-              {footer.brand} &copy; {new Date().getFullYear()}
+              {footer.brand} &copy; {new Date().getFullYear()} &#174; - {footer.title}
             </p>
           </div>
           <div className="col terms-col">

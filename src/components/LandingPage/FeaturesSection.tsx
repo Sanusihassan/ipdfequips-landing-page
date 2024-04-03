@@ -200,10 +200,10 @@ export const FeaturesSection = ({
       icon: PhotographIcon,
     },
     {
-      title: tool.Markdown_to_PDF.title,
-      description: tool.Markdown_to_PDF.description as string,
-      to: `${langPath}${tool.Markdown_to_PDF.to}`,
-      color: tool.Markdown_to_PDF.color as string,
+      title: tool.PDF_to_Markdown.title,
+      description: tool.PDF_to_Markdown.description as string,
+      to: `${langPath}${tool.PDF_to_Markdown.to}`,
+      color: tool.PDF_to_Markdown.color as string,
       icon: MarkdownIcon,
     },
   ];
@@ -220,7 +220,7 @@ export const FeaturesSection = ({
                 <a
                   href={
                     // "https://3000-sanusihassan-pdfequips-x5kvhyduops.ws-eu107.gitpod.io/" +
-                    card.to
+                    card.to + "/"
                   }
                   className="link"
                   title={card.title}
@@ -244,9 +244,9 @@ export const FeaturesSection = ({
                       })}
                     </div>
                     <div className="card-body">
-                      <h3 className="card-title">
+                      <div className="card-title _h3">
                         <bdi>{card.title}</bdi>
-                      </h3>
+                      </div>
                       <p className="card-text">
                         <bdi>{card.description}</bdi>
                       </p>

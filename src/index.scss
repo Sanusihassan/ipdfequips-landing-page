@@ -139,6 +139,18 @@ a.dropdown-item {
   }
 }
 
+._h3 {
+  @include extend("h3");
+}
+
+._h4 {
+  @include extend("h4");
+}
+
+._h2 {
+  @include extend("h2");
+}
+
 .container {
   @include extend("container");
 
@@ -222,7 +234,7 @@ footer {
 
     .copyright-text {
       // mb-0 py-0
-      @include extend("text-muted mb-0 py-0");
+      @include extend("text-muted col-md-6 mb-0 py-0");
     }
 
     @include xs {

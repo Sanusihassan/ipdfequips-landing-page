@@ -1,20 +1,19 @@
 export const landing_page = {
   hero: {
-    title: "All the tools you need to work with PDF files in one place",
+    title: "All-In-One PDF Software & Tools in one place",
     description:
       "All the PDF tools you can imagine are readily available at your disposal. Completely free and easy to use! You can merge, split, compress, convert, rotate, open and add watermarks to PDF files effortlessly with just a few clicks.",
   },
   features: {
     title: "How PDFEquips Can Simplify Your PDF Tasks",
+    // 
     description:
-      "PDFEquips simplifies PDF file management by offering tools for format conversion, flexible editing, and efficient file organization. Enhanced security features. With its intuitive interface, comprehensive editing capabilities, and OCR technology, it simplifies tasks such as annotations and text extraction from scanned documents. Batch processing and automation features boost productivity. PDFEquips lets professionals unlock the full potential of PDF files.",
+      "PDFEquips simplifies PDF file management by offering All-In-One PDF Software tools for format conversion, flexible editing, and efficient file organization, along with enhanced security features. With its intuitive interface, comprehensive editing capabilities, and OCR technology, it simplifies tasks such as annotations and text extraction from scanned documents. Additionally, batch processing and automation features boost productivity, allowing professionals to unlock the full potential of PDF files.",
   },
   why_us: {
     title: "The PDF solution you can rely on",
     description:
-      "PDFEquips is your ultimate web app for managing PDF with ease. Enjoy all\
-    the features you need to work effectively with your digital documents\
-    while keeping your data safe and secure.",
+      "PDFEquips is your ultimate web app for managing PDFs with ease. Enjoy all the features you need to work effectively with your digital documents, all in one place, while keeping your data safe and secure.",
   },
   // alert: {
   //   title: "How about viewing PDFEquips in English?",
@@ -497,6 +496,7 @@ export const footer = {
   terms: "terms",
   conditions: "conditions",
   privacy_policy: "privacy policy",
+  title: "Free Online PDF Tools"
 };
 
 // please add an error message for "ERR_NETWORK" case with message for this errors object

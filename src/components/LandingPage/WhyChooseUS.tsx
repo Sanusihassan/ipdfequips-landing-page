@@ -7,7 +7,7 @@ export function WhyChooseUs({ title, description }: IWhyChooseUsProps) {
   return (
     <div className="container why-us">
       <div className="content-wrapper">
-        <h2 className="title">{title}</h2>
+        <div className="title _h2">{title}</div>
         <p className="description">{description}</p>
       </div>
     </div>
