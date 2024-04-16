@@ -28,9 +28,9 @@ const ConvertFrom = ({
   const prependLangToUrl = usePrependLangToUrl();
   return (
     <ul className="nav-list convert-tools vertical-list">
-      <h6>
+      <li className="_h6">
         <bdi>{title}</bdi>
-      </h6>
+      </li>
       <li className="nav-list-item">
         <a href={prependLangToUrl("/pdf-to-jpg")} className="nav-link">
           <bdi>{convert_from.pdf_to_jpg}</bdi>{" "}

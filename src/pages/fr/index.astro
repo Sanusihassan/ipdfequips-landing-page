@@ -3,7 +3,7 @@ const lang = "fr";
 import { landing_page, tool, footer } from "../../content/content-fr";
 import Header from "../../components/Header.astro";
 import { OpenGraph } from "pdfequips-open-graph/OpenGraph";
-import Footer from "../../components/Footer";
+import Footer from "../../components/Footer.astro";
 import LandingPage from "../../components/LandingPage";
 import "../../index.scss";
 ---
@@ -20,6 +20,8 @@ import "../../index.scss";
 			content="De puissants outils PDF pour gérer facilement les documents. Vous pouvez fusionner, diviser, compresser, transformer, faire pivoter, ouvrir et ajouter des filigranes à vos fichiers en quelques clics."
 		/>
 		<link rel="icon" href="/logo.png" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<meta name="theme-color" content="#FC271C" />
 		<meta
 			name="keywords"
 			content="Outils PDF, Convertir en PDF, JPG en PDF, WORD en PDF, POWERPOINT en PDF, EXCEL en PDF, HTML en PDF, Convertir de PDF, PDF en JPG, PDF en WORD, PDF en POWERPOINT, PDF en EXCEL, PDF en PDF/A, PDF en texte, fusionner PDF, compresser PDF."
@@ -59,6 +61,6 @@ import "../../index.scss";
 	<body>
 		<Header lang={lang} />
 		<LandingPage landing_page={landing_page} tool={tool} lang={lang} />
-		<Footer client:load footer={footer} lang={lang} />
+		<Footer footer={footer} lang={lang} />
 	</body>
 </html>

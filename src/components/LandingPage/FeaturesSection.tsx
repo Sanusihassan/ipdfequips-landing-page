@@ -37,14 +37,14 @@ export const FeaturesSection = ({
   let langPath = lang ? `/${lang}` : "";
   const languages = ["ar", "fr", "zh", "hi", "es"];
   const regex = new RegExp(`\\/(${languages.join("|")})|\\/+`, "g");
+  const first = {
+    title: tool.Merge_PDF.title,
+    description: tool.Merge_PDF.description,
+    to: `${langPath}${tool.Merge_PDF.to}`,
+    color: tool.Merge_PDF.color as string,
+    icon: DocumentDuplicateIcon,
+  };
   const featureCards = [
-    {
-      title: tool.Merge_PDF.title,
-      description: tool.Merge_PDF.description,
-      to: `${langPath}${tool.Merge_PDF.to}`,
-      color: tool.Merge_PDF.color as string,
-      icon: DocumentDuplicateIcon,
-    },
     {
       title: tool.Split_PDF.title,
       description: tool.Split_PDF.description,
@@ -212,8 +212,42 @@ export const FeaturesSection = ({
     <section className="features-section py-5">
       <div className="container">
         <h2 className="title">{title}</h2>{" "}
-        <p className="descripiton">{description}</p>
+        <h6 className="descripiton">{description}</h6>
         <div className="features">
+          <div className="feature">
+            <div className={`text-decoration-none text-dark ${first.to}`}>
+              <a
+                href={
+                  // "https://3000-sanusihassan-pdfequips-x5kvhyduops.ws-eu107.gitpod.io/" +
+                  first.to + "/"
+                }
+                className="link"
+                title={first.title}
+              // onClick={() => {
+              //   return dispatch(setPath(path));
+              // }}
+              >
+                <div className={`feature-card card ${first.to.replace(regex, "")}`}>
+                  <div className="feature-icon">
+                    {React.createElement(first.icon as FunctionComponent<{ className: string; style: { [x: string]: string; }; }>, {
+                      className: "h6 w6",
+                      style: {
+                        color: first.color,
+                      },
+                    })}
+                  </div>
+                  <div className="card-body">
+                    <h4 className="card-title _h3">
+                      <bdi>{first.title}</bdi>
+                    </h4>
+                    <p className="card-text">
+                      <bdi>{first.description}</bdi>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
           {featureCards.map((card, index) => (
             <div key={index} className="feature">
               <div className={`text-decoration-none text-dark ${card.to}`}>

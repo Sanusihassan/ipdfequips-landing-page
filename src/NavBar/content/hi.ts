@@ -53,4 +53,6 @@ export const nav_content: _nav_content = {
     pdf_to_webp: "पीडीएफ से वेबपी में",
     pdf_to_heif_heic: "पीडीएफ से हीइएफ/हीइक में"
   },
+  sidebar: { menu: "मेनू", home: "होम" },
+  language: "भाषा"
 };

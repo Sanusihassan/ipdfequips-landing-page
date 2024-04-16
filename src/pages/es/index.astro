@@ -2,7 +2,7 @@
 import { landing_page, tool, footer } from "../../content/content-es";
 import Header from "../../components/Header.astro";
 import { OpenGraph } from "pdfequips-open-graph/OpenGraph";
-import Footer from "../../components/Footer";
+import Footer from "../../components/Footer.astro";
 import LandingPage from "../../components/LandingPage";
 import "../../index.scss";
 const lang = "es";
@@ -22,6 +22,8 @@ const lang = "es";
 			content="Potentes herramientas PDF para administrar documentos fácilmente. Puede fusionar, dividir, comprimir, transformar, rotar, abrir y agregar marcas de agua a sus archivos con solo unos pocos clics."
 		/>
 		<link rel="icon" href="/logo.png" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<meta name="theme-color" content="#FC271C" />
 		<meta
 			name="keywords"
 			content="Herramientas de PDF, Convertir a PDF, JPG a PDF, WORD a PDF, POWERPOINT a PDF, EXCEL a PDF, HTML a PDF, Convertir de PDF, PDF a JPG, PDF a WORD, PDF a POWERPOINT, PDF a EXCEL, PDF a PDF/A, PDF a texto, Combinar PDF, Comprimir PDF"
@@ -62,6 +64,6 @@ const lang = "es";
 	<body>
 		<Header lang={lang} />
 		<LandingPage landing_page={landing_page} tool={tool} lang={lang} />
-		<Footer client:load footer={footer} lang={lang} />
+		<Footer footer={footer} lang={lang} />
 	</body>
 </html>

@@ -2,7 +2,8 @@ import { useEffect, useRef } from "react";
 import LanguageIcon from "../icons/LanguageIcon";
 import { useNavState } from "../src/useNavState";
 import { getLanguage, setLanguage } from "../src/language";
-const LanguageDropdown = (props: React.ComponentProps<"div">) => {
+const LanguageDropdown = ({ removeTrailingSlash = false, language, ...props }: { removeTrailingSlash?: boolean, language?: string } & React.ComponentProps<"div">) => {
+
   const { path, showLangMenu, setShowLangMenu } = useNavState();
   const langMenuRef = useRef<HTMLDivElement>(null);
   const langWrapperRef = useRef<HTMLDivElement>(null);
@@ -35,6 +36,8 @@ const LanguageDropdown = (props: React.ComponentProps<"div">) => {
             setShowLangMenu(false);
           }
         }}
+        title={language}
+        type="button"
       >
         <LanguageIcon className="icon" />
       </button>
@@ -58,7 +61,7 @@ const LanguageDropdown = (props: React.ComponentProps<"div">) => {
           </li>
           <li className="nav-list-item">
             <a
-              href={`/ar/${path}`}
+              href={`/ar${removeTrailingSlash ? "" : "/"}${path}`}
               className="nav-link"
               onClick={() => {
                 setLanguage("ar");
@@ -70,7 +73,7 @@ const LanguageDropdown = (props: React.ComponentProps<"div">) => {
           {/* spanish route */}
           <li className="nav-list-item">
             <a
-              href={`/es/${path}`}
+              href={`/es${removeTrailingSlash ? "" : "/"}${path}`}
               className="nav-link"
               onClick={() => {
                 setLanguage("es");
@@ -82,7 +85,7 @@ const LanguageDropdown = (props: React.ComponentProps<"div">) => {
           {/* french route */}
           <li className="nav-list-item">
             <a
-              href={`/fr/${path}`}
+              href={`/fr${removeTrailingSlash ? "" : "/"}${path}`}
               className="nav-link"
               onClick={() => {
                 setLanguage("fr");
@@ -94,7 +97,7 @@ const LanguageDropdown = (props: React.ComponentProps<"div">) => {
           {/* hindi route */}
           <li className="nav-list-item">
             <a
-              href={`/hi/${path}`}
+              href={`/hi${removeTrailingSlash ? "" : "/"}${path}`}
               className="nav-link"
               onClick={() => {
                 setLanguage("hi");
@@ -106,7 +109,7 @@ const LanguageDropdown = (props: React.ComponentProps<"div">) => {
           {/* chinease route */}
           <li className="nav-list-item">
             <a
-              href={`/zh/${path}`}
+              href={`/zh${removeTrailingSlash ? "" : "/"}${path}`}
               className="nav-link"
               onClick={() => {
                 setLanguage("zh");

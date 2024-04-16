@@ -2,7 +2,7 @@
 import { landing_page, tool, footer } from "../content/content";
 import Header from "../components/Header.astro";
 import { OpenGraph } from "pdfequips-open-graph/OpenGraph";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer.astro";
 import LandingPage from "../components/LandingPage";
 import "../index.scss";
 import Analytics from "../components/Analytics.astro";
@@ -72,6 +72,6 @@ const lang = "";
 	<body>
 		<Header />
 		<LandingPage landing_page={landing_page} tool={tool} lang={lang} />
-		<Footer client:load footer={footer} lang={lang} />
+		<Footer footer={footer} lang={lang} />
 	</body>
 </html>

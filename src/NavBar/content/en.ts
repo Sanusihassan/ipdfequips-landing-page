@@ -51,4 +51,6 @@ export const nav_content = {
     web_to_pdf: "Web to PDF",
     markdown_to_pdf: "Markdown to PDF",
   },
+  sidebar: { menu: "Menu", home: "Home" },
+  language: "Language"
 };

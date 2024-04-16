@@ -52,7 +52,7 @@ export const SideBar = ({ content }: { content: nav_content }) => {
     >
       <div className="content">
         <div className="toggler-wrapper">
-          <SideBarToggler />
+          <SideBarToggler sidebar={content.sidebar} />
         </div>
         <NavList content={content} isSideBar />
       </div>

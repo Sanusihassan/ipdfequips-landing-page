@@ -2,7 +2,7 @@
 import { landing_page, tool, footer } from "../../content/content-ar";
 import Header from "../../components/Header.astro";
 import { OpenGraph } from "pdfequips-open-graph/OpenGraph";
-import Footer from "../../components/Footer";
+import Footer from "../../components/Footer.astro";
 import LandingPage from "../../components/LandingPage";
 import "../../index.scss";
 import Analytics from "../../components/Analytics.astro";
@@ -21,6 +21,8 @@ const lang = "ar";
 			content="أدوات PDF قوية لإدارة المستندات بسهولة. يمكنك دمج وتقسيم وضغط وتحويل وتدوير وفتح وإضافة علامات مائية إلى ملفاتك ببضع نقرات فقط."
 		/>
 		<link rel="icon" href="/logo.png" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<meta name="theme-color" content="#FC271C" />
 		<meta
 			name="keywords"
 			content="أدوات PDF ، التحويل إلى PDF ، JPG إلى PDF ، WORD إلى PDF ، POWERPOINT إلى PDF ، EXCEL إلى PDF ، HTML إلى PDF ، التحويل من PDF ، PDF إلى JPG ، PDF إلى WORD ، PDF إلى POWERPOINT ، PDF إلى EXCEL ، PDF إلى PDF / A ، PDF إلى نص ، دمج PDF ، ضغط PDF. "
@@ -62,6 +64,6 @@ const lang = "ar";
 	<body>
 		<Header lang={lang} />
 		<LandingPage landing_page={landing_page} tool={tool} lang={lang} />
-		<Footer client:load footer={footer} lang={lang} />
+		<Footer footer={footer} lang={lang} />
 	</body>
 </html>

@@ -53,4 +53,7 @@ export const nav_content: _nav_content = {
     pdf_to_webp: "PDF إلى WebP",
     pdf_to_heif_heic: "PDF إلى HEIF/HEIC"
   },
+  sidebar: { menu: "القائمة", home: "الصفحة الرئيسية" },
+  language: "اللغة"
+
 };

@@ -28,9 +28,9 @@ const ConvertTo = ({
 
   return (
     <ul className="nav-list convert-tools vertical-list">
-      <h6>
+      <li className="_h6">
         <bdi>{title}</bdi>
-      </h6>
+      </li>
       <li className="nav-list-item">
         <a href={prependLangToUrl("/jpg-to-pdf")} className="nav-link">
           <PhotographIcon className="icon inline-block mr-2 img" />{" "}
@@ -81,37 +81,37 @@ const ConvertTo = ({
       </li>
       <li className="nav-list-item">
         <a href={prependLangToUrl("/gif-to-pdf")} className="nav-link">
-        <MdOutlineGif className="icon inline-block mr-2 gif" />{" "}
+          <MdOutlineGif className="icon inline-block mr-2 gif" />{" "}
           <bdi>{convert_to.gif_to_pdf}</bdi>{" "}
         </a>
       </li>
       <li className="nav-list-item">
         <a href={prependLangToUrl("/tiff-to-pdf")} className="nav-link">
-        <BsFiletypeTiff className="icon inline-block mr-2 tiff" />{" "}
+          <BsFiletypeTiff className="icon inline-block mr-2 tiff" />{" "}
           <bdi>{convert_to.tiff_to_pdf}</bdi>{" "}
         </a>
       </li>
       <li className="nav-list-item">
         <a href={prependLangToUrl("/bmp-to-pdf")} className="nav-link">
-        <BsFiletypeBmp className="icon inline-block mr-2 bmp" />{" "}
+          <BsFiletypeBmp className="icon inline-block mr-2 bmp" />{" "}
           <bdi>{convert_to.bmp_to_pdf}</bdi>{" "}
         </a>
       </li>
       <li className="nav-list-item">
         <a href={prependLangToUrl("/svg-to-pdf")} className="nav-link">
-        <BsFiletypeSvg className="icon inline-block mr-2 svg" />{" "}
+          <BsFiletypeSvg className="icon inline-block mr-2 svg" />{" "}
           <bdi>{convert_to.svg_to_pdf}</bdi>{" "}
         </a>
       </li>
       <li className="nav-list-item">
         <a href={prependLangToUrl("/webp-to-pdf")} className="nav-link">
-        <FaCamera className="icon inline-block mr-2 webp" />{" "}
+          <FaCamera className="icon inline-block mr-2 webp" />{" "}
           <bdi>{convert_to.webp_to_pdf}</bdi>{" "}
         </a>
       </li>
       <li className="nav-list-item">
         <a href={prependLangToUrl("/heif-heic-to-pdf")} className="nav-link">
-        <BsFiletypeHeic className="icon inline-block mr-2 heif-heic" />{" "}
+          <BsFiletypeHeic className="icon inline-block mr-2 heif-heic" />{" "}
           <bdi>{convert_to.heif_heic_to_pdf}</bdi>{" "}
         </a>
       </li>

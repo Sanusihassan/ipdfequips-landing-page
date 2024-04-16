@@ -4,5 +4,5 @@ const { lang } = Astro.props;
 ---
 
 <header>
-    <Navbar client:idle path="" lang={lang ? lang : ""} />
+    <Navbar client:load path="" lang={lang ? lang : ""} />
 </header>

@@ -22,10 +22,10 @@ const Navbar = ({
   }, []);
   return (
     <nav className={`navbar${!shadow ? " no-shadow" : ""}`}>
-      <SideBarToggler lang={lang} />
+      <SideBarToggler lang={lang} sidebar={content.sidebar} />
       <SideBar content={content} />
       <NavList content={content} />
-      <LanguageDropdown />
+      <LanguageDropdown language={content.language} />
     </nav>
   );
 };

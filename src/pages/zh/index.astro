@@ -3,7 +3,7 @@ const lang = "zh";
 import { landing_page, tool, footer } from "../../content/content-zh";
 import Header from "../../components/Header.astro";
 import { OpenGraph } from "pdfequips-open-graph/OpenGraph";
-import Footer from "../../components/Footer";
+import Footer from "../../components/Footer.astro";
 import LandingPage from "../../components/LandingPage";
 import "../../index.scss";
 ---
@@ -20,6 +20,8 @@ import "../../index.scss";
 			content="强大的PDF工具，轻松管理文档。 只需点击几下，您就可以合并、分割、压缩、转换、旋转、打开文件以及添加水印。"
 		/>
 		<link rel="icon" href="/logo.png" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<meta name="theme-color" content="#FC271C" />
 		<meta
 			name="keywords"
 			content="PDF 工具，转换为 PDF、JPG 为 PDF、WORD 为 PDF、POWERPOINT 为 PDF、EXCEL 为 PDF、HTML 为 PDF、从 PDF 转换、PDF 为 JPG、PDF 为 WORD、PDF 为 POWERPOINT、PDF 为 EXCEL、PDF 为 PDF/A、PDF 到文本、合并 PDF、压缩 PDF。"
@@ -60,6 +62,6 @@ import "../../index.scss";
 	<body>
 		<Header lang={lang} />
 		<LandingPage landing_page={landing_page} tool={tool} lang={lang} />
-		<Footer client:load footer={footer} lang={lang} />
+		<Footer footer={footer} lang={lang} />
 	</body>
 </html>
