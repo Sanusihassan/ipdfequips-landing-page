@@ -6,61 +6,60 @@ import { OpenGraph } from "pdfequips-open-graph/OpenGraph";
 import Footer from "../../components/Footer.astro";
 import LandingPage from "../../components/LandingPage";
 import "../../index.scss";
+import Icons from "../../components/Icons.astro";
+import Alternatives from "../../components/Alternatives.astro";
 ---
 
 <html lang={lang} dir="ltr">
-	<head>
-		<meta charset="utf-8" />
-		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
-		<meta name="generator" content={Astro.generator} />
-		<title>PDFEquips | Outils PDF en ligne et outils PDF gratuits</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta
-			name="description"
-			content="De puissants outils PDF pour gérer facilement les documents. Vous pouvez fusionner, diviser, compresser, transformer, faire pivoter, ouvrir et ajouter des filigranes à vos fichiers en quelques clics."
-		/>
-		<link rel="icon" href="/logo.png" />
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-		<meta name="theme-color" content="#FC271C" />
-		<meta
-			name="keywords"
-			content="Outils PDF, Convertir en PDF, JPG en PDF, WORD en PDF, POWERPOINT en PDF, EXCEL en PDF, HTML en PDF, Convertir de PDF, PDF en JPG, PDF en WORD, PDF en POWERPOINT, PDF en EXCEL, PDF en PDF/A, PDF en texte, fusionner PDF, compresser PDF."
-		/>
-		<OpenGraph
-			ogDescription="PDFEquips - Outils PDF gratuits | Simplifiez vos besoins PDF avec PDFEquips.com"
-			ogLocale="ar_FR"
-			ogImage="https://www.pdfequips.com/pdfequips-fr.png"
-		/>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link
-			rel="preconnect"
-			href="https://fonts.gstatic.com"
-			cross-origin=""
-		/>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-			rel="stylesheet"
-		/>
-		<!-- <script
+  <head>
+    <meta charset="utf-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+    <meta name="generator" content={Astro.generator} />
+    <title>PDFEquips | Outils PDF en ligne et outils PDF gratuits</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="De puissants outils PDF pour gérer facilement les documents. Vous pouvez fusionner, diviser, compresser, transformer, faire pivoter, ouvrir et ajouter des filigranes à vos fichiers en quelques clics."
+    />
+    <link rel="icon" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta
+      name="keywords"
+      content="Outils PDF, Convertir en PDF, JPG en PDF, WORD en PDF, POWERPOINT en PDF, EXCEL en PDF, HTML en PDF, Convertir de PDF, PDF en JPG, PDF en WORD, PDF en POWERPOINT, PDF en EXCEL, PDF en PDF/A, PDF en texte, fusionner PDF, compresser PDF."
+    />
+    <OpenGraph
+      ogDescription="PDFEquips - Outils PDF gratuits | Simplifiez vos besoins PDF avec PDFEquips.com"
+      ogLocale="ar_FR"
+      ogImage="https://www.pdfequips.com/pdfequips-fr.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" cross-origin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <Icons />
+    <!-- <script
 			type="application/ld+json"
 			dangerouslySetInnerHTML={{
 				__html: JSON.stringify(websiteSchema),
 			}}></script> -->
-		<meta http-equiv="Content-Language" content={lang} />
-		<!-- <meta name="google-adsense-account" content="ca-pub-7391414384206267" />
+    <meta http-equiv="Content-Language" content={lang} />
+    <Alternatives />
+    <!-- <meta name="google-adsense-account" content="ca-pub-7391414384206267" />
 				<script
 					async
 					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7391414384206267"
 					crossOrigin="anonymous"
 				></script> -->
-		<meta
-			name="ahrefs-site-verification"
-			content="a532671b5b7f09bad30e7e65542ecf2f8f28a1ef5a25b2bec358924427540367"
-		/>
-	</head>
-	<body>
-		<Header lang={lang} />
-		<LandingPage landing_page={landing_page} tool={tool} lang={lang} />
-		<Footer footer={footer} lang={lang} />
-	</body>
+    <meta
+      name="ahrefs-site-verification"
+      content="a532671b5b7f09bad30e7e65542ecf2f8f28a1ef5a25b2bec358924427540367"
+    />
+  </head>
+  <body>
+    <Header lang={lang} />
+    <LandingPage landing_page={landing_page} tool={tool} lang={lang} />
+    <Footer footer={footer} lang={lang} />
+  </body>
 </html>

@@ -6,6 +6,8 @@ import Footer from "../components/Footer.astro";
 import LandingPage from "../components/LandingPage";
 import "../index.scss";
 import Analytics from "../components/Analytics.astro";
+import Icons from "../components/Icons.astro";
+import Alternatives from "../components/Alternatives.astro";
 const lang = "";
 // const websiteSchema = {
 // 	"@context": "http://schema.org",
@@ -22,56 +24,55 @@ const lang = "";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
-		<meta name="generator" content={Astro.generator} />
-		<title>PDFEquips | Free Online PDF Tools</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta
-			name="description"
-			content="Powerful PDF tools to easily manage documents. You can merge, split, compress, transform, rotate, open and add watermarks to your files with just a few clicks."
-		/>
-		<link rel="icon" href="/logo.png" />
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-		<meta
-			name="keywords"
-			content="PDF tools, Convert to PDF, JPG to PDF, WORD to PDF, POWERPOINT to PDF, EXCEL to PDF, HTML to PDF, Convert from PDF, PDF to JPG, PDF to WORD, PDF to POWERPOINT, PDF to EXCEL, PDF to PDF/A, PDF to text, Merge PDF, Compress PDF."
-		/>
-		<Analytics />
-		<OpenGraph
-			ogDescription="PDFEquips - Free PDF Tools | Simplify Your PDF Needs with PDFEquips.com"
-		/>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link
-			rel="preconnect"
-			href="https://fonts.gstatic.com"
-			cross-origin=""
-		/>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-			rel="stylesheet"
-		/>
-		<!-- <script
+  <head>
+    <meta charset="utf-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+    <meta name="generator" content={Astro.generator} />
+    <title>PDFEquips | Free Online PDF Tools</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Powerful PDF tools to easily manage documents. You can merge, split, compress, transform, rotate, open and add watermarks to your files with just a few clicks."
+    />
+    <link rel="icon" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta
+      name="keywords"
+      content="PDF tools, Convert to PDF, JPG to PDF, WORD to PDF, POWERPOINT to PDF, EXCEL to PDF, HTML to PDF, Convert from PDF, PDF to JPG, PDF to WORD, PDF to POWERPOINT, PDF to EXCEL, PDF to PDF/A, PDF to text, Merge PDF, Compress PDF."
+    />
+    <Analytics />
+    <OpenGraph
+      ogDescription="PDFEquips - Free PDF Tools | Simplify Your PDF Needs with PDFEquips.com"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" cross-origin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <script
 			type="application/ld+json"
 			dangerouslySetInnerHTML={{
 				__html: JSON.stringify(websiteSchema),
 			}}></script> -->
-		<meta http-equiv="Content-Language" content="en" />
-		<!-- <meta name="google-adsense-account" content="ca-pub-7391414384206267" />
+    <meta http-equiv="Content-Language" content="en" />
+    <Alternatives />
+    <!-- <meta name="google-adsense-account" content="ca-pub-7391414384206267" />
 				<script
 					async
 					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7391414384206267"
 					crossOrigin="anonymous"
 				></script> -->
-		<meta
-			name="ahrefs-site-verification"
-			content="a532671b5b7f09bad30e7e65542ecf2f8f28a1ef5a25b2bec358924427540367"
-		/>
-	</head>
-	<body>
-		<Header />
-		<LandingPage landing_page={landing_page} tool={tool} lang={lang} />
-		<Footer footer={footer} lang={lang} />
-	</body>
+    <Icons />
+    <meta
+      name="ahrefs-site-verification"
+      content="a532671b5b7f09bad30e7e65542ecf2f8f28a1ef5a25b2bec358924427540367"
+    />
+    <link rel="canonical" href="https://www.pdfequips.com" />
+  </head>
+  <body>
+    <Header />
+    <LandingPage landing_page={landing_page} tool={tool} lang={lang} />
+    <Footer footer={footer} lang={lang} />
+  </body>
 </html>
