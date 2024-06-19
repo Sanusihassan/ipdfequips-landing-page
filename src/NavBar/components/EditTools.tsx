@@ -7,10 +7,11 @@ import { LockClosedIcon } from "@heroicons/react/solid";
 import { useNavState } from "../src/useNavState";
 import StampIcon from "../icons/StampIcon";
 import NumbersIcon from "../icons/Numbers";
-import type { nav_content } from "../navbar";
+import { type nav_content } from "../global";
 import { useEffect, useRef } from "react";
 import { usePrependLangToUrl } from "../src/prependLangToUrl";
 import RemovePagesIcon from "../icons/RemovePagesIcon";
+import ResizeFileIcon from "../icons/ResizeFileIcon";
 
 const EditTools = ({ content }: { content: nav_content["edit"] }) => {
   const { showEditMenu, setEditMenuRef } = useNavState();
@@ -41,6 +42,15 @@ const EditTools = ({ content }: { content: nav_content["edit"] }) => {
               <RemovePagesIcon className="icon remove" />
               &nbsp;
               {content.remove}
+            </bdi>
+          </a>
+        </li>
+        <li className="nav-list-item">
+          <a href={prependLangToUrl("/resize-pdf")} className="nav-link">
+            <bdi>
+              <ResizeFileIcon className="icon resize" />
+              &nbsp;
+              {content.resize}
             </bdi>
           </a>
         </li>

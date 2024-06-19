@@ -1,6 +1,6 @@
 import ConvertTo from "./ConvertTo";
 import ConvertFrom from "./ConvertFrom";
-import type { nav_content } from "../navbar";
+import { type nav_content } from "../global";
 import { useNavState } from "../src/useNavState";
 import { useEffect, useRef } from "react";
 

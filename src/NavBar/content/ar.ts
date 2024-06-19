@@ -1,4 +1,4 @@
-import type { nav_content as _nav_content } from "../navbar";
+import { type nav_content as _nav_content } from "../global"
 
 export const nav_content: _nav_content = {
   merge: "دمج",
@@ -14,6 +14,7 @@ export const nav_content: _nav_content = {
     unlock: "إلغاء قفل PDF",
     watermark: "علامة مائية للـ PDF",
     remove: "إزالة الصفحات",
+    resize: "تغيير حجم الصفحات"
   },
   convert: "تحويل",
   convert_pdf: "تحويل PDF",
@@ -34,6 +35,9 @@ export const nav_content: _nav_content = {
     html_to_pdf: "HTML إلى PDF",
     markdown_to_pdf: "Markdown إلى PDF",
     web_to_pdf: "من الويب إلى PDF",
+    image_to_pdf: "تحويل الصورة إلى PDF",
+    text_to_pdf: "تحويل النص إلى PDF",
+    csv_to_pdf: "تحويل CSV إلى PDF"
   },
   convert_from_pdf: "تحويل من PDF",
   convert_from: {
@@ -51,7 +55,9 @@ export const nav_content: _nav_content = {
     pdf_to_bmp: "PDF إلى BMP",
     pdf_to_svg: "PDF إلى SVG",
     pdf_to_webp: "PDF إلى WebP",
-    pdf_to_heif_heic: "PDF إلى HEIF/HEIC"
+    pdf_to_heif_heic: "PDF إلى HEIF/HEIC",
+    pdf_to_image: "تحويل PDF إلى صورة",
+    pdf_to_csv: "تحويل PDF إلى CSV"
   },
   sidebar: { menu: "القائمة", home: "الصفحة الرئيسية" },
   language: "اللغة"

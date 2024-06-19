@@ -1,4 +1,4 @@
-import type { nav_content as _nav_content } from "../navbar";
+import { type nav_content as _nav_content } from "../global";
 
 export const nav_content: _nav_content = {
   merge: "合并",
@@ -13,7 +13,8 @@ export const nav_content: _nav_content = {
     lock: "锁定 PDF",
     unlock: "解锁 PDF",
     watermark: "PDF 添加水印",
-    remove: "删除页面"
+    remove: "删除页面",
+    resize: "调整页面大小"
   },
   convert: "转换",
   convert_pdf: "转换PDF",
@@ -35,6 +36,9 @@ export const nav_content: _nav_content = {
     html_to_pdf: "HTML转PDF",
     markdown_to_pdf: "降价到 PDF",
     web_to_pdf: "网页转 PDF",
+    image_to_pdf: "图片转为PDF",
+    text_to_pdf: "文本转为PDF",
+    csv_to_pdf: "CSV转为PDF"
   },
   convert_from: {
     pdf_to_jpg: "PDF转JPG",
@@ -51,7 +55,9 @@ export const nav_content: _nav_content = {
     pdf_to_bmp: "PDF转BMP",
     pdf_to_svg: "PDF转SVG",
     pdf_to_webp: "PDF转WebP",
-    pdf_to_heif_heic: "PDF转HEIF/HEIC"
+    pdf_to_heif_heic: "PDF转HEIF/HEIC",
+    pdf_to_image: "PDF 转为图片",
+    pdf_to_csv: "PDF 转为CSV"
   },
   sidebar: { menu: "菜单", home: "主页" },
   language: "语言"

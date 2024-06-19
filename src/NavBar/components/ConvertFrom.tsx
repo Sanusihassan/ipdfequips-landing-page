@@ -8,15 +8,17 @@ import {
   DocumentTextIcon,
 } from "@heroicons/react/outline";
 import MarkdownIcon from "../icons/Markdown";
-import type { nav_content } from "../navbar";
 import { usePrependLangToUrl } from "../src/prependLangToUrl";
 import { TbFileTypePng } from "react-icons/tb";
 import { MdOutlineGif } from "react-icons/md";
-import { BsFiletypeTiff } from "react-icons/bs";
+import { BsFiletypeCsv, BsFiletypeTiff, BsFillFileEarmarkWordFill } from "react-icons/bs";
 import { BsFiletypeBmp } from "react-icons/bs";
 import { BsFiletypeSvg } from "react-icons/bs";
-import { FaCamera } from "react-icons/fa6";
+import { FaCamera, FaFilePdf } from "react-icons/fa6";
 import { BsFiletypeHeic } from "react-icons/bs";
+import { type nav_content } from "../global";
+import { CiImageOn } from "react-icons/ci";
+import { SiMicrosoftexcel, SiMicrosoftpowerpoint } from "react-icons/si";
 
 const ConvertFrom = ({
   convert_from,
@@ -32,27 +34,27 @@ const ConvertFrom = ({
         <bdi>{title}</bdi>
       </li>
       <li className="nav-list-item">
-        <a href={prependLangToUrl("/pdf-to-jpg")} className="nav-link">
-          <bdi>{convert_from.pdf_to_jpg}</bdi>{" "}
-          <PhotographIcon className="icon inline-block mr-2 img" />
+        <a href={prependLangToUrl("/pdf-to-image")} className="nav-link">
+          <bdi>{convert_from.pdf_to_image}</bdi>{" "}
+          <CiImageOn className="icon inline-block mr-2 image" />
         </a>
       </li>
       <li className="nav-list-item">
         <a href={prependLangToUrl("/pdf-to-word")} className="nav-link">
           <bdi>{convert_from.pdf_to_word}</bdi>{" "}
-          <DocumentIcon className="icon inline-block mr-2 word" />
+          <BsFillFileEarmarkWordFill className="icon inline-block mr-2 word" />
         </a>
       </li>
       <li className="nav-list-item">
         <a href={prependLangToUrl("/pdf-to-powerpoint")} className="nav-link">
           <bdi>{convert_from.pdf_to_powerpoint}</bdi>{" "}
-          <PresentationChartBarIcon className="icon inline-block mr-2 ppt" />
+          <SiMicrosoftpowerpoint className="icon inline-block mr-2 ppt" />
         </a>
       </li>
       <li className="nav-list-item">
         <a href={prependLangToUrl("/pdf-to-excel")} className="nav-link">
           <bdi>{convert_from.pdf_to_excel}</bdi>{" "}
-          <TableIcon className="icon inline-block mr-2 excel" />
+          <SiMicrosoftexcel className="icon inline-block mr-2 excel" />
         </a>
       </li>
       <li className="nav-list-item">
@@ -64,7 +66,7 @@ const ConvertFrom = ({
       <li className="nav-list-item">
         <a href={prependLangToUrl("/pdf-to-pdf-a")} className="nav-link">
           <bdi>{convert_from.pdf_to_pdf_a}</bdi>{" "}
-          <DocumentAddIcon className="icon inline-block mr-2" />
+          <FaFilePdf className="icon inline-block mr-2" />
         </a>
       </li>
       <li className="nav-list-item">
@@ -80,7 +82,12 @@ const ConvertFrom = ({
           <MarkdownIcon className="icon inline-block mr-2 web" />{" "}
         </a>
       </li>
-
+      <li className="nav-list-item">
+        <a href={prependLangToUrl("/pdf-to-jpg")} className="nav-link">
+          <bdi>{convert_from.pdf_to_jpg}</bdi>{" "}
+          <PhotographIcon className="icon inline-block mr-2 img" />
+        </a>
+      </li>
       <li className="nav-list-item">
         <a href={prependLangToUrl("/pdf-to-png")} className="nav-link">
           <bdi>{convert_from.pdf_to_png}</bdi>{" "}
@@ -121,6 +128,12 @@ const ConvertFrom = ({
         <a href={prependLangToUrl("/pdf-to-heif-heic")} className="nav-link">
           <bdi>{convert_from.pdf_to_heif_heic}</bdi>{" "}
           <BsFiletypeHeic className="icon inline-block mr-2 heif-heic" />{" "}
+        </a>
+      </li>
+      <li className="nav-list-item">
+        <a href={prependLangToUrl("/pdf-to-csv")} className="nav-link">
+          <bdi>{convert_from.pdf_to_csv}</bdi>{" "}
+          <BsFiletypeCsv className="icon inline-block mr-2 excel" />{" "}
         </a>
       </li>
     </ul>

@@ -14,14 +14,14 @@ export const nav_content = {
     lock: "Lock PDF",
     unlock: "Unlock PDF",
     watermark: "Watermark PDF",
-    remove: "Remove Pages"
+    remove: "Remove Pages",
+    resize: "Resize Pages"
   },
   convert_from: {
     pdf_to_jpg: "PDF to JPG",
     pdf_to_word: "PDF to WORD",
     pdf_to_powerpoint: "PDF to POWERPOINT",
     pdf_to_excel: "PDF to EXCEL",
-    pdf_to_text: "PDF to text",
     pdf_to_html: "PDF to HTML",
     pdf_to_markdown: "PDF to Markdown",
     pdf_to_pdf_a: "PDF to PDF/A",
@@ -32,6 +32,9 @@ export const nav_content = {
     pdf_to_svg: "PDF to SVG",
     pdf_to_webp: "PDF to WebP",
     pdf_to_heif_heic: "PDF to HEIF/HEIC",
+    pdf_to_text: "PDF to TEXT",
+    pdf_to_image: "PDF to IMAGE",
+    pdf_to_csv: "PDF to CSV"
   },
   convert_from_pdf: "Convert from PDF",
   read_edit_pdf: "Read & Edit PDF",
@@ -50,6 +53,9 @@ export const nav_content = {
     html_to_pdf: "HTML to PDF",
     web_to_pdf: "Web to PDF",
     markdown_to_pdf: "Markdown to PDF",
+    image_to_pdf: "IMAGE to PDF",
+    text_to_pdf: "TEXT to PDF",
+    csv_to_pdf: "CSV to PDF"
   },
   sidebar: { menu: "Menu", home: "Home" },
   language: "Language"

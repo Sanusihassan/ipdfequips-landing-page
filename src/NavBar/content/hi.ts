@@ -1,4 +1,4 @@
-import type { nav_content as _nav_content } from "../navbar";
+import { type nav_content as _nav_content } from "../global";
 
 export const nav_content: _nav_content = {
   merge: "मर्ज",
@@ -14,7 +14,8 @@ export const nav_content: _nav_content = {
     lock: "पीडीएफ को ताला लगाएं",
     unlock: "पीडीएफ का ताला खोलें",
     watermark: "पीडीएफ पर जलीय चिह्न",
-    remove: "पृष्ठ हटाएं"
+    remove: "पृष्ठ हटाएं",
+    resize: "पृष्ठों का आकार बदलें"
   },
   convert: "रूपांतरित करें",
   convert_to_pdf: "पीडीएफ में परिवर्तित करें",
@@ -35,6 +36,9 @@ export const nav_content: _nav_content = {
     html_to_pdf: "एचटीएमएल से पीडीएफ",
     markdown_to_pdf: "पीडीएफ में मार्कडाउन करें",
     web_to_pdf: "वेब से पीडीएफ",
+    image_to_pdf: "छवि को PDF में",
+    text_to_pdf: "पाठ को PDF में",
+    csv_to_pdf: "CSV को PDF में"
   },
   convert_from: {
     pdf_to_jpg: "पीडीएफ से जेपीजी",
@@ -51,7 +55,9 @@ export const nav_content: _nav_content = {
     pdf_to_bmp: "पीडीएफ से बीएमपी में",
     pdf_to_svg: "पीडीएफ से एसवीजी में",
     pdf_to_webp: "पीडीएफ से वेबपी में",
-    pdf_to_heif_heic: "पीडीएफ से हीइएफ/हीइक में"
+    pdf_to_heif_heic: "पीडीएफ से हीइएफ/हीइक में",
+    pdf_to_image: "PDF को छवि में",
+    pdf_to_csv: "PDF को CSV में"
   },
   sidebar: { menu: "मेनू", home: "होम" },
   language: "भाषा"

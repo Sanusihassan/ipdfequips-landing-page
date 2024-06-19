@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import type { nav_content } from "../navbar";
+import { type nav_content } from "../global";
 import { useNavState } from "../src/useNavState";
 import NavList from "./NavList";
 import { SideBarToggler } from "./SideBarToggler";

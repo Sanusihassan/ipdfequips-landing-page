@@ -1,5 +1,5 @@
 // content
-import type { nav_content } from "./navbar";
+import type { nav_content } from "./global";
 import { nav_content as en_nav_content } from "./content/en";
 import { nav_content as ar_nav_content } from "./content/ar";
 import { nav_content as es_nav_content } from "./content/es";

@@ -7,7 +7,7 @@ import LandingPage from "../components/LandingPage";
 import "../index.scss";
 import Analytics from "../components/Analytics.astro";
 import Icons from "../components/Icons.astro";
-import Alternatives from "../components/Alternatives.astro";
+// import Alternatives from "../components/Alternatives.astro";
 const lang = "";
 // const websiteSchema = {
 // 	"@context": "http://schema.org",
@@ -26,7 +26,7 @@ const lang = "";
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+    <link rel="icon" type="image/svg+xml" href="/images/icons/logo.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>PDFEquips | Free Online PDF Tools</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -56,13 +56,12 @@ const lang = "";
 				__html: JSON.stringify(websiteSchema),
 			}}></script> -->
     <meta http-equiv="Content-Language" content="en" />
-    <Alternatives />
-    <!-- <meta name="google-adsense-account" content="ca-pub-7391414384206267" />
-				<script
-					async
-					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7391414384206267"
-					crossOrigin="anonymous"
-				></script> -->
+    <!-- <Alternatives /> -->
+    <meta name="google-adsense-account" content="ca-pub-7391414384206267" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7391414384206267"
+      crossOrigin="anonymous"></script>
     <Icons />
     <meta
       name="ahrefs-site-verification"

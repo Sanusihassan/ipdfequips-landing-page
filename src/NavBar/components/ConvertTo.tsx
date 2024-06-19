@@ -1,25 +1,25 @@
 import {
   PhotographIcon,
-  DocumentIcon,
-  PresentationChartBarIcon,
-  TableIcon,
   CodeIcon,
   GlobeIcon,
 } from "@heroicons/react/outline";
 import MarkdownIcon from "../icons/Markdown";
-import type { nav_content } from "../navbar";
+import { type nav_content } from "../global";
 import { usePrependLangToUrl } from "../src/prependLangToUrl";
 import { TbFileTypePng } from "react-icons/tb";
 import { MdOutlineGif } from "react-icons/md";
-import { BsFiletypeTiff } from "react-icons/bs";
+import { BsFiletypeCsv, BsFiletypeTiff, BsFillFileEarmarkWordFill } from "react-icons/bs";
 import { BsFiletypeBmp } from "react-icons/bs";
 import { BsFiletypeSvg } from "react-icons/bs";
 import { FaCamera } from "react-icons/fa6";
 import { BsFiletypeHeic } from "react-icons/bs";
+import { CiImageOn } from "react-icons/ci";
+import { IoDocumentTextOutline } from "react-icons/io5";
+import { SiMicrosoftexcel, SiMicrosoftpowerpoint } from "react-icons/si";
 
 const ConvertTo = ({
   convert_to,
-  title
+  title,
 }: {
   convert_to: nav_content["convert_to"];
   title: string;
@@ -32,26 +32,26 @@ const ConvertTo = ({
         <bdi>{title}</bdi>
       </li>
       <li className="nav-list-item">
-        <a href={prependLangToUrl("/jpg-to-pdf")} className="nav-link">
-          <PhotographIcon className="icon inline-block mr-2 img" />{" "}
-          <bdi>{convert_to.jpg_to_pdf}</bdi>
+        <a href={prependLangToUrl("/image-to-pdf")} className="nav-link">
+          <CiImageOn className="icon inline-block mr-2 image" />{" "}
+          <bdi>{convert_to.image_to_pdf}</bdi>
         </a>
       </li>
       <li className="nav-list-item">
         <a href={prependLangToUrl("/word-to-pdf")} className="nav-link">
-          <DocumentIcon className="icon inline-block mr-2 word" />{" "}
+          <BsFillFileEarmarkWordFill className="icon inline-block mr-2 word" />{" "}
           <bdi>{convert_to.word_to_pdf}</bdi>
         </a>
       </li>
       <li className="nav-list-item">
         <a href={prependLangToUrl("/powerpoint-to-pdf")} className="nav-link">
-          <PresentationChartBarIcon className="icon inline-block mr-2 ppt" />{" "}
+          <SiMicrosoftpowerpoint className="icon inline-block mr-2 ppt" />{" "}
           <bdi>{convert_to.powerpoint_to_pdf}</bdi>
         </a>
       </li>
       <li className="nav-list-item">
         <a href={prependLangToUrl("/excel-to-pdf")} className="nav-link">
-          <TableIcon className="icon inline-block mr-2 excel" />{" "}
+          <SiMicrosoftexcel className="icon inline-block mr-2 excel" />{" "}
           <bdi>{convert_to.excel_to_pdf}</bdi>
         </a>
       </li>
@@ -68,9 +68,21 @@ const ConvertTo = ({
         </a>
       </li>
       <li className="nav-list-item">
+        <a href={prependLangToUrl("/text-to-pdf")} className="nav-link">
+          <IoDocumentTextOutline className="icon inline-block mr-2 text" />{" "}
+          <bdi>{convert_to.text_to_pdf}</bdi>{" "}
+        </a>
+      </li>
+      <li className="nav-list-item">
         <a href={prependLangToUrl("/markdown-to-pdf")} className="nav-link">
           <MarkdownIcon className="icon inline-block mr-2 web" />{" "}
           <bdi>{convert_to.markdown_to_pdf}</bdi>{" "}
+        </a>
+      </li>
+      <li className="nav-list-item">
+        <a href={prependLangToUrl("/jpg-to-pdf")} className="nav-link">
+          <PhotographIcon className="icon inline-block mr-2 img" />{" "}
+          <bdi>{convert_to.jpg_to_pdf}</bdi>
         </a>
       </li>
       <li className="nav-list-item">
@@ -113,6 +125,12 @@ const ConvertTo = ({
         <a href={prependLangToUrl("/heif-heic-to-pdf")} className="nav-link">
           <BsFiletypeHeic className="icon inline-block mr-2 heif-heic" />{" "}
           <bdi>{convert_to.heif_heic_to_pdf}</bdi>{" "}
+        </a>
+      </li>
+      <li className="nav-list-item">
+        <a href={prependLangToUrl("/csv-to-pdf")} className="nav-link">
+          <BsFiletypeCsv className="icon inline-block mr-2 excel" />{" "}
+          <bdi>{convert_to.csv_to_pdf}</bdi>{" "}
         </a>
       </li>
     </ul>

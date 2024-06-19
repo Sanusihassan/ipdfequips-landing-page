@@ -1,4 +1,4 @@
-import type { nav_content as _nav_content } from "../navbar";
+import { type nav_content as _nav_content } from "../global";
 
 export const nav_content: _nav_content = {
   merge: "Fusionner",
@@ -13,7 +13,8 @@ export const nav_content: _nav_content = {
     lock: "Verrouiller le PDF",
     unlock: "Déverrouiller le PDF",
     watermark: "Filigrane PDF",
-    remove: "Supprimer les pages"
+    remove: "Supprimer les pages",
+    resize: "Redimensionner les pages"
   },
   convert: "Convertir",
   convert_pdf: "Convertir des PDF",
@@ -35,6 +36,9 @@ export const nav_content: _nav_content = {
     html_to_pdf: "HTML en PDF",
     markdown_to_pdf: "Markdown en PDF",
     web_to_pdf: "Web vers PDF",
+    image_to_pdf: "IMAGE en PDF",
+    text_to_pdf: "TEXTE en PDF",
+    csv_to_pdf: "CSV en PDF"
   },
   convert_from: {
     pdf_to_jpg: "PDF en JPG",
@@ -51,7 +55,9 @@ export const nav_content: _nav_content = {
     pdf_to_bmp: "PDF vers BMP",
     pdf_to_svg: "PDF vers SVG",
     pdf_to_webp: "PDF vers WebP",
-    pdf_to_heif_heic: "PDF vers HEIF/HEIC"
+    pdf_to_heif_heic: "PDF vers HEIF/HEIC",
+    pdf_to_image: "PDF en IMAGE",
+    pdf_to_csv: "PDF en CSV"
   },
   sidebar: { menu: "Menu", home: "Accueil" },
   language: "Langue"

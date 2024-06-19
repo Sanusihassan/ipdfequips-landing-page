@@ -2,7 +2,7 @@ import React, { useCallback, useEffect } from "react";
 import { ChevronUpIcon } from "@heroicons/react/outline";
 import ConvertTools from "../components/ConvertTools";
 import EditTools from "../components/EditTools";
-import type { nav_content } from "../navbar";
+import { type nav_content } from "../global";
 import { useNavState } from "../src/useNavState";
 import { usePrependLangToUrl } from "../src/prependLangToUrl";
 const NavList = ({
@@ -87,7 +87,7 @@ const NavList = ({
       </li>
       <li className="nav-list-item subnav-container">
         <a
-          href="#"
+          href="javascript:void(0);"
           className="nav-link dropdown-toggler"
           onClick={(e) => {
             e.preventDefault();
@@ -113,7 +113,7 @@ const NavList = ({
       </li>
       <li className="nav-list-item subnav-container">
         <a
-          href="#"
+          href="javascript:void(0);"
           className="nav-link dropdown-toggler"
           onClick={(e) => {
             e.preventDefault();
