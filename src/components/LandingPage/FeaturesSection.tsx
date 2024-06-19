@@ -1,16 +1,10 @@
 import React, { type FunctionComponent } from "react";
 import {
   DocumentDuplicateIcon,
-  PresentationChartBarIcon,
   ScissorsIcon,
-  DocumentTextIcon,
-  TableIcon,
-  DocumentIcon,
   PhotographIcon,
   LockOpenIcon,
   RefreshIcon,
-  DocumentAddIcon,
-  GlobeIcon,
   TranslateIcon,
   CodeIcon,
 } from "@heroicons/react/outline";
@@ -22,6 +16,11 @@ import OcrIcon from "./OcrIcon";
 import NumbersIcon from "../../NavBar/icons/Numbers";
 import OrganizePDFIcon from "../icons/OrganizePDF";
 import MarkdownIcon from "../../NavBar/icons/Markdown";
+import { BsFillFileEarmarkWordFill } from "react-icons/bs";
+import { LuFileText } from "react-icons/lu";
+import { SiMicrosoftexcel, SiMicrosoftpowerpoint } from "react-icons/si";
+import { FaFilePdf } from "react-icons/fa6";
+import { CiGlobe } from "react-icons/ci";
 
 export const FeaturesSection = ({
   tool,
@@ -71,35 +70,35 @@ export const FeaturesSection = ({
       description: tool.PDF_to_Text.description,
       to: `${langPath}${tool.PDF_to_Text.to}`,
       color: tool.PDF_to_Text.color as string,
-      icon: DocumentTextIcon,
+      icon: LuFileText,
     },
     {
       title: tool.PDF_to_Powerpoint.title,
       description: tool.PDF_to_Powerpoint.description as string,
       to: `${langPath}${tool.PDF_to_Powerpoint.to}`,
       color: tool.PDF_to_Powerpoint.color as string,
-      icon: PresentationChartBarIcon,
+      icon: SiMicrosoftpowerpoint,
     },
     {
       title: tool.PDF_to_EXCEL.title,
       description: tool.PDF_to_EXCEL.description as string,
       to: `${langPath}${tool.PDF_to_EXCEL.to}`,
       color: tool.PDF_to_EXCEL.color as string,
-      icon: TableIcon,
+      icon: SiMicrosoftexcel,
     },
     {
       title: tool.WORD_to_PDF.title,
       description: tool.WORD_to_PDF.description as string,
       to: `${langPath}${tool.WORD_to_PDF.to}`,
       color: tool.WORD_to_PDF.color as string,
-      icon: DocumentIcon,
+      icon: BsFillFileEarmarkWordFill,
     },
     {
       title: tool.PDF_to_WORD.title,
       description: tool.PDF_to_WORD.description as string,
       to: `${langPath}${tool.PDF_to_WORD.to}`,
       color: tool.PDF_to_WORD.color as string,
-      icon: DocumentIcon,
+      icon: BsFillFileEarmarkWordFill,
     },
     {
       title: tool.Ocr_PDF.title,
@@ -113,7 +112,7 @@ export const FeaturesSection = ({
       description: tool.POWERPOINT_to_PDF.description as string,
       to: `${langPath}${tool.POWERPOINT_to_PDF.to}`,
       color: tool.POWERPOINT_to_PDF.color as string,
-      icon: PresentationChartBarIcon,
+      icon: SiMicrosoftpowerpoint,
     },
     {
       title: tool.Add_Watermark.title,
@@ -176,14 +175,14 @@ export const FeaturesSection = ({
       description: tool.PDF_to_PDF_A.description as string,
       to: `${langPath}${tool.PDF_to_PDF_A.to}`,
       color: tool.PDF_to_PDF_A.color as string,
-      icon: DocumentAddIcon,
+      icon: FaFilePdf,
     },
     {
       title: tool.Web_to_PDF.title,
       description: tool.Web_to_PDF.description as string,
       to: `${langPath}${tool.Web_to_PDF.to}`,
       color: tool.Web_to_PDF.color as string,
-      icon: GlobeIcon,
+      icon: CiGlobe,
     },
     {
       title: tool.PDF_to_HTML.title,
