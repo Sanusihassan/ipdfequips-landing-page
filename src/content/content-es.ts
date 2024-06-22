@@ -11,22 +11,19 @@ import type {
 
 export const landing_page: _landing_page = {
   hero: {
-    title:
-      "Todas las herramientas que necesitas para trabajar con archivos PDF en un solo lugar",
+    title: "Edita PDFs como un profesional con PDFEquips",
     description:
-      "Todas las herramientas PDF que puedas imaginar están disponibles a tu disposición. ¡Completamente gratis y fácil de usar! Puede fusionar, dividir, comprimir, convertir, rotar, abrir y agregar marcas de agua a archivos PDF sin esfuerzo con solo unos pocos clics.",
+      "¡Edita PDFs como un profesional con PDFEquips! Todas las herramientas que necesitas, gratis y fáciles de usar. Fusiona, divide, comprime, convierte, rota y agrega marcas de agua con solo unos clics.",
   },
   features: {
-    title: "Cómo PDFEquips puede simplificar tus tareas PDF",
+    title: "Cómo PDFEquips puede simplificar tus tareas de PDF",
     description:
-      "PDFEquips simplifica la gestión de archivos PDF al ofrecer herramientas para la conversión de formatos, edición flexible y organización eficiente de archivos. Funciones de seguridad mejoradas. Con su interfaz intuitiva, capacidades integrales de edición y tecnología OCR, simplifica tareas como anotaciones y extracción de texto de documentos escaneados. Las funciones de automatización y procesamiento por lotes aumentan la productividad. PDFEquips permite a los profesionales desbloquear todo el potencial de los archivos PDF.",
+      "PDFEquips facilita la gestión de PDFs con herramientas todo en uno para convertir, editar y organizar archivos. Disfruta de seguridad mejorada, una interfaz intuitiva, tecnología OCR y procesamiento por lotes para aumentar la productividad. Perfecto para profesionales que quieren aprovechar al máximo sus PDFs.",
   },
   why_us: {
     title: "La solución PDF en la que puedes confiar",
     description:
-      "PDFEquips es tu aplicación web definitiva para gestionar PDF con facilidad. Disfruta de todas\
-    las funciones que necesitas para trabajar eficazmente con tus documentos digitales\
-    mientras mantienes tus datos seguros y protegidos.",
+      "PDFEquips es tu aplicación web para la gestión fácil de PDFs. Obtén todas las funciones que necesitas para trabajar con documentos digitales, todo en un lugar seguro.",
   },
 };
 
@@ -243,247 +240,12 @@ export const translate_pdf = {
   browse_file: "Examinar sus archivos",
 };
 
-export const edit_page: _edit_page = {
-  edit_page_titles: {
-    merge_pdf: "Opciones para fusionar PDF",
-    split_pdf: "Opciones para dividir PDF",
-    compress_pdf: "Opciones para comprimir PDF",
-    pdf_to_powerpoint: "Opciones para convertir PDF a PowerPoint",
-    jpg_to_pdf: "Opciones para convertir JPG a PDF",
-    word_to_pdf: "Opciones para convertir WORD a PDF",
-    powerpoint_to_pdf: "Opciones para convertir POWERPOINT a PDF",
-    excel_to_pdf: "Opciones para convertir EXCEL a PDF",
-    html_to_pdf: "Opciones para convertir HTML a PDF",
-    pdf_to_jpg: "Opciones para convertir PDF a JPG",
-    pdf_to_word: "Opciones para convertir PDF a WORD",
-    pdf_to_excel: "Opciones para convertir PDF a EXCEL",
-    pdf_to_pdf_a: "Opciones para convertir PDF a PDF/A",
-    pdf_to_text: "Opciones de PDF a texto",
-  },
-  loader_text: "Por favor espera...",
-  add_more_button: "Agrega más archivos",
-  action_buttons: {
-    merge_pdf: "Combinar PDF",
-    split_pdf: "Dividir PDF",
-    compress_pdf: "Comprimir PDF",
-    pdf_to_powerpoint: "Convertir a Powerpoint",
-    jpg_to_pdf: "Convertir a PDF",
-    word_to_pdf: "Convertir a PDF",
-    powerpoint_to_pdf: "Convertir a PDF",
-    excel_to_pdf: "Convertir a PDF",
-    html_to_pdf: "Convertir a PDF",
-    pdf_to_jpg: "Convertir a JPG",
-    pdf_to_word: "Convertir a Word",
-    pdf_to_excel: "Convertir a Excel",
-    pdf_to_pdf_a: "Convertir a PDF/A",
-    pdf_to_text: "Convertir a texto",
-    translate_pdf: "Traducir PDF",
-  },
-  pages: "paginas",
-  page: "página",
-  compress_pdf: [
-    {
-      title: "Compresión recomendada",
-      description: "Mejor equilibrio entre tamaño y calidad",
-    },
-    {
-      title: "Menos compresión",
-      description: "Tamaño de archivo más pequeño pero calidad inferior",
-    },
-    {
-      title: "Compresión extrema",
-      description:
-        "Tamaño de archivo significativamente más pequeño pero mucha calidad inferior",
-    },
-    {
-      title: "Compresión personalizada",
-      description: "Elige tu propio nivel de compresión",
-    },
-  ],
-  merge_pdf:
-    "Usa arrastrar y soltar para cambiar el orden de los archivos PDF para combinarlos. Haz clic y   mantén presionado un archivo, muévelo a la ubicación deseada y suelta el botón del mouse.   Los archivos PDF se fusionan de arriba hacia abajo. Para eliminar un archivo, haz clic en el icono de eliminar   encima del archivo. Para rotar una página, haz clic en el icono de rotación encima de   la miniatura de página y selecciona el ángulo de rotación deseado. Una vez que los archivos estén   en el orden y orientación deseado, haz clic en el botón 'Combinar' para unirlos   en un solo archivo PDF.",
-};
-
-export const tools: _tools = {
-  select: "Seleccionar",
-  or_drop: "o soltar archivos aquí",
-  files: "archivos",
-  drop_files: "Arrastra los archivos aquí",
-};
-
-export const downloadFile: _downloadFile = {
-  titles: {
-    "merge-pdf": [
-      "¡Combinación de archivos PDF exitosa!",
-      "¡Combinación de archivo PDF exitosa!",
-    ],
-    "split-pdf": ["¡División de archivo PDF exitosa!"],
-    "compress-pdf": [
-      "¡Compresión de archivos PDF exitosa!",
-      "¡Compresión de archivo PDF exitosa!",
-    ],
-    "pdf-to-powerpoint": [
-      "¡Conversión de archivos PDF a PowerPoint exitosa!",
-      "¡Conversión de archivo PDF a PowerPoint exitosa!",
-    ],
-    "jpg-to-pdf": [
-      "¡Conversión de archivos JPG a PDF exitosa!",
-      "¡Conversión de archivo JPG a PDF exitosa!",
-    ],
-    "word-to-pdf": [
-      "¡Conversión de archivos Word a PDF exitosa!",
-      "¡Conversión de archivo Word a PDF exitosa!",
-    ],
-    "powerpoint-to-pdf": [
-      "¡Conversión de archivos PowerPoint a PDF exitosa!",
-      "¡Conversión de archivo PowerPoint a PDF exitosa!",
-    ],
-    "excel-to-pdf": [
-      "¡Conversión de archivos Excel a PDF exitosa!",
-      "¡Conversión de archivo Excel a PDF exitosa!",
-    ],
-    "html-to-pdf": [
-      "¡Conversión de archivos HTML a PDF exitosa!",
-      "¡Conversión de archivo HTML a PDF exitosa!",
-    ],
-    "pdf-to-jpg": [
-      "¡Conversión de archivos PDF a JPG exitosa!",
-      "¡Conversión de archivo PDF a JPG exitosa!",
-    ],
-    "pdf-to-word": [
-      "¡Conversión de archivos PDF a Word exitosa!",
-      "¡Conversión de archivo PDF a Word exitosa!",
-    ],
-    "pdf-to-excel": [
-      "¡Conversión de archivos PDF a Excel exitosa!",
-      "¡Conversión de archivo PDF a Excel exitosa!",
-    ],
-    "pdf-to-pdf-a": [
-      "¡Conversión de archivos PDF a PDF/A exitosa!",
-      "¡Conversión de archivo PDF a PDF/A exitosa!",
-    ],
-    "web-to-pdf": [
-      "¡Conversión de sitios web a archivos PDF exitosa!",
-      "¡Conversión de sitio web a archivo PDF exitosa!",
-    ],
-    "pdf-to-text": [
-      "¡Conversión de archivos PDF a texto exitosa!",
-      "¡Conversión de archivo PDF a texto exitosa!",
-    ],
-    "markdown-to-pdf": [
-      "¡Conversión de archivos Markdown a PDF exitosa!",
-      "¡Conversión de archivo Markdown a PDF exitosa!",
-    ],
-    "pdf-to-html": [
-      "¡Conversión de archivos PDF a HTML exitosa!",
-      "¡Conversión de archivo PDF a HTML exitosa!",
-    ],
-    "pdf-to-markdown": [
-      "¡Conversión de archivos PDF a Markdown exitosa!",
-      "¡Conversión de archivo PDF a Markdown exitosa!",
-    ],
-  },
-  btnText: {
-    "merge-pdf": [
-      "Descargar archivos PDF combinados",
-      "Descargar archivo PDF combinado",
-    ],
-    "split-pdf": [
-      "Descargar archivos PDF divididos",
-      "Descargar archivo PDF dividido",
-    ],
-    "compress-pdf": [
-      "Descargar archivos PDF comprimidos",
-      "Descargar archivo PDF comprimido",
-    ],
-    "pdf-to-powerpoint": [
-      "Descargar archivos PowerPoint convertidos",
-      "Descargar archivo PowerPoint convertido",
-    ],
-    "jpg-to-pdf": [
-      "Descargar archivos PDF convertidos",
-      "Descargar archivo PDF convertido",
-    ],
-    "word-to-pdf": [
-      "Descargar archivos PDF convertidos",
-      "Descargar archivo PDF convertido",
-    ],
-    "powerpoint-to-pdf": [
-      "Descargar archivos PDF convertidos",
-      "Descargar archivo PDF convertido",
-    ],
-    "excel-to-pdf": [
-      "Descargar archivos PDF convertidos",
-      "Descargar archivo PDF convertido",
-    ],
-    "html-to-pdf": [
-      "Descargar archivos PDF convertidos",
-      "Descargar archivo PDF convertido",
-    ],
-    "pdf-to-jpg": [
-      "Descargar archivos JPG convertidos",
-      "Descargar archivo JPG convertido",
-    ],
-    "pdf-to-word": [
-      "Descargar archivos Word convertidos",
-      "Descargar archivo Word convertido",
-    ],
-    "pdf-to-excel": [
-      "Descargar archivos Excel convertidos",
-      "Descargar archivo Excel convertido",
-    ],
-    "pdf-to-pdf-a": [
-      "Descargar archivos PDF/A convertidos",
-      "Descargar archivo PDF/A convertido",
-    ],
-    "web-to-pdf": [
-      "Descargar archivos PDF convertidos",
-      "Descargar archivo PDF convertido",
-    ],
-    "pdf-to-text": [
-      "Descargar archivos de texto extraídos",
-      "Descargar archivo de texto extraído",
-    ],
-    "markdown-to-pdf": [
-      "Descargar archivos PDF convertidos",
-      "Descargar archivo PDF convertido",
-    ],
-    "pdf-to-html": [
-      "Descargar archivos HTML convertidos",
-      "Descargar archivo HTML convertido",
-    ],
-    "pdf-to-markdown": [
-      "Descargar archivos Markdown convertidos",
-      "Descargar archivo Markdown convertido",
-    ],
-  },
-  backto: {
-    "merge-pdf": "Volver a unir PDF",
-    "split-pdf": "Volver a dividir PDF",
-    "compress-pdf": "Volver a comprimir PDF",
-    "pdf-to-powerpoint": "Volver a PDF a PowerPoint",
-    "jpg-to-pdf": "Volver a JPG a PDF",
-    "word-to-pdf": "Volver a Word a PDF",
-    "powerpoint-to-pdf": "Volver a PowerPoint a PDF",
-    "excel-to-pdf": "Volver a Excel a PDF",
-    "html-to-pdf": "Volver a HTML a PDF",
-    "pdf-to-jpg": "Volver a PDF a JPG",
-    "pdf-to-word": "Volver a PDF a Word",
-    "pdf-to-excel": "Volver a PDF a Excel",
-    "pdf-to-pdf-a": "Volver a PDF a PDF-A",
-    "web-to-pdf": "Volver a Web a PDF",
-    "pdf-to-text": "Volver a PDF a Texto",
-    "markdown-to-pdf": "Volver a Markdown a PDF",
-    "pdf-to-html": "Volver a PDF a HTML",
-    "pdf-to-markdown": "Volver a PDF a Markdown",
-  },
-};
-
 export const footer: _footer = {
   brand: "PDFEquips",
   terms: "términos",
   conditions: "condiciones",
   privacy_policy: "política de privacidad",
+  title: "Herramientas PDF en línea gratuitas"
 };
 
 export const errors: _errors = {

@@ -11,21 +11,19 @@ import type {
 
 export const landing_page: _landing_page = {
   hero: {
-    title: "Tous les outils dont vous avez besoin pour travailler avec des fichiers PDF en un seul endroit",
+    title: "Éditez des PDFs comme un pro avec PDFEquips",
     description:
-      "Tous les outils PDF que vous pouvez imaginer sont à votre disposition. Entièrement gratuit et facile à utiliser ! Vous pouvez fusionner, diviser, compresser, convertir, faire pivoter, ouvrir et ajouter des filigranes aux fichiers PDF sans effort en quelques clics.",
+      "Éditez des PDFs comme un pro avec PDFEquips ! Tous les outils dont vous avez besoin, gratuits et faciles à utiliser. Fusionnez, divisez, compressez, convertissez, faites pivoter et ajoutez des filigranes en quelques clics.",
   },
   features: {
     title: "Comment PDFEquips peut simplifier vos tâches PDF",
     description:
-      "PDFEquips simplifie la gestion des fichiers PDF en offrant des outils de conversion de format, d'édition flexible et d'organisation efficace des fichiers. Fonctionnalités de sécurité améliorées. Avec son interface intuitive, ses capacités d'édition complètes et sa technologie OCR, il simplifie les tâches telles que les annotations et l'extraction de texte à partir de documents numérisés. Les fonctionnalités de traitement par lots et d’automatisation augmentent la productivité. PDFEquips permet aux professionnels de libérer tout le potentiel des fichiers PDF.",
+      "PDFEquips facilite la gestion des PDFs avec des outils tout-en-un pour convertir, éditer et organiser les fichiers. Profitez d'une sécurité renforcée, d'une interface intuitive, de la technologie OCR et du traitement par lots pour augmenter la productivité. Parfait pour les professionnels souhaitant tirer le meilleur parti de leurs PDFs.",
   },
   why_us: {
     title: "La solution PDF sur laquelle vous pouvez compter",
     description:
-      "PDFEquips est votre application web ultime pour gérer les PDF en toute simplicité. Profitez de toutes\
-    les fonctionnalités dont vous avez besoin pour travailler efficacement avec vos documents numériques\
-    tout en préservant la sécurité et la confidentialité de vos données.",
+      "PDFEquips est votre application web de référence pour la gestion facile des PDFs. Obtenez toutes les fonctionnalités dont vous avez besoin pour travailler avec des documents numériques, le tout dans un endroit sécurisé.",
   },
 };
 
@@ -478,6 +476,7 @@ export const footer: _footer = {
   terms: "conditions",
   conditions: "conditions d'utilisation",
   privacy_policy: "politique de confidentialité",
+  title: "Outils PDF en ligne gratuits"
 };
 
 export const errors: _errors = {

@@ -11,21 +11,19 @@ import type {
 
 export const landing_page: _landing_page = {
   hero: {
-    title: "处理 PDF 文件所需的所有工具集中在一处",
+    title: "使用PDFEquips像专业人士一样编辑PDF",
     description:
-      "您可以想象到的所有 PDF 工具都可以随时使用。 完全免费且易于使用！ 只需点击几下，您就可以轻松地合并、分割、压缩、转换、旋转、打开 PDF 文件以及添加水印。",
+      "使用PDFEquips像专业人士一样编辑PDF！所有您需要的工具，免费且易于使用。只需点击几下即可合并、拆分、压缩、转换、旋转和添加水印。",
   },
   features: {
-    title: "PDFEquips 如何简化您的 PDF 任务",
+    title: "PDFEquips如何简化您的PDF任务",
     description:
-      "PDFEquips 通过提供格式转换、灵活编辑和高效文件组织工具来简化 PDF 文件管理。 增强的安全功能。 凭借其直观的界面、全面的编辑功能和 OCR 技术，它简化了扫描文档的注释和文本提取等任务。 批处理和自动化功能可提高生产力。 PDFEquips 可让专业人士释放 PDF 文件的全部潜力。",
+      "PDFEquips通过提供一体化工具来简化PDF管理，可用于文件转换、编辑和组织。享受增强的安全性、直观的界面、OCR技术和批处理功能，提高生产力。非常适合专业人士充分利用他们的PDF文件。",
   },
   why_us: {
-    title: "您可以信赖的 PDF 解决方案",
+    title: "您可以依赖的PDF解决方案",
     description:
-      "PDFEquips 是您管理 PDF 的终极网络应用程序。享受所有\
-    您需要高效处理数字文档的功能\
-    同时保证您的数据安全和隐私。",
+      "PDFEquips是您轻松管理PDF的首选网络应用程序。获取您需要的所有功能，在一个安全的地方处理数字文档。",
   },
 };
 
@@ -385,6 +383,7 @@ export const footer: _footer = {
   terms: "条款",
   conditions: "条件",
   privacy_policy: "隐私政策",
+  title: "免费在线PDF工具"
 };
 
 export const errors: _errors = {
