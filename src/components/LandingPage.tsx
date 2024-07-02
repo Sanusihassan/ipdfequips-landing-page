@@ -43,11 +43,11 @@ const LandingPage = ({
         tool={tool}
         lang={lang}
       />
+      <WhyChooseUs title={landing_page.why_choose_us.title} reasons={landing_page.why_choose_us.reasons} />
       <TheSolutionYouCanRelyOn
         title={landing_page.why_us.title}
         description={landing_page.why_us.description}
       />
-      <WhyChooseUs title={landing_page.why_choose_us.title} reasons={landing_page.why_choose_us.reasons} />
     </section>
   );
 };
