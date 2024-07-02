@@ -8,9 +8,7 @@
     }
 
     .title {
-        font-size: 2.5rem;
-        font-weight: 700;
-        text-align: center;
+        @include extend("display-4 text-center");
         margin-bottom: 40px;
         color: #333;
     }
