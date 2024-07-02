@@ -14,6 +14,31 @@ export const landing_page = {
     description:
       "PDFEquips is your go-to web app for easy PDF management. Get all the features you need to work with digital documents, all in one secure place.",
   },
+  why_choose_us: {
+    title: "Why Choose Us?",
+    reasons: [
+      {
+        icon: "🚀",
+        title: "Fast and Efficient",
+        description: "Convert your PDFs quickly with our optimized tools."
+      },
+      {
+        icon: "🔒",
+        title: "Secure",
+        description: "Your files are stored on our servers but deleted immediately after processing."
+      },
+      {
+        icon: "💯",
+        title: "High Quality",
+        description: "Maintain the original quality of your documents throughout the conversion process."
+      },
+      {
+        icon: "🆓",
+        title: "Free to Use",
+        description: "Enjoy our PDF tools without any cost or hidden fees."
+      }
+    ]
+  }
   // alert: {
   //   title: "How about viewing PDFEquips in English?",
   //   dontShowAgain: "Do not show this again",

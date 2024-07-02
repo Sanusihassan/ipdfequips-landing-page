@@ -25,6 +25,31 @@ export const landing_page: _landing_page = {
     description:
       "PDFEquips est votre application web de référence pour la gestion facile des PDFs. Obtenez toutes les fonctionnalités dont vous avez besoin pour travailler avec des documents numériques, le tout dans un endroit sécurisé.",
   },
+  why_choose_us: {
+    title: "Pourquoi choisir PDFEquips ?",
+    reasons: [
+      {
+        icon: "🚀",
+        title: "Rapide et Efficace",
+        description: "Convertissez vos PDF rapidement avec nos outils optimisés."
+      },
+      {
+        icon: "🔒",
+        title: "Sécurisé",
+        description: "Vos fichiers sont stockés sur nos serveurs mais supprimés immédiatement après le traitement."
+      },
+      {
+        icon: "💯",
+        title: "Haute Qualité",
+        description: "Conservez la qualité originale de vos documents tout au long du processus de conversion."
+      },
+      {
+        icon: "🆓",
+        title: "Gratuit à l'Utilisation",
+        description: "Profitez de nos outils PDF sans aucun coût ni frais cachés."
+      }
+    ]
+  }
 };
 
 export const tool: _tool = {

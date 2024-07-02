@@ -47,7 +47,7 @@ const LandingPage = ({
         title={landing_page.why_us.title}
         description={landing_page.why_us.description}
       />
-      <WhyChooseUs description={landing_page.why_us.description} title={landing_page.wny_us.title} />
+      <WhyChooseUs title={landing_page.why_choose_us.title} reasons={landing_page.why_choose_us.reasons} />
     </section>
   );
 };

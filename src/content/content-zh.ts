@@ -25,6 +25,31 @@ export const landing_page: _landing_page = {
     description:
       "PDFEquips是您轻松管理PDF的首选网络应用程序。获取您需要的所有功能，在一个安全的地方处理数字文档。",
   },
+  why_choose_us: {
+    title: "为什么选择PDFEquips？",
+    reasons: [
+      {
+        icon: "🚀",
+        title: "快速高效",
+        description: "使用我们优化的工具快速转换您的PDF。"
+      },
+      {
+        icon: "🔒",
+        title: "安全",
+        description: "您的文件存储在我们的服务器上，但在处理后立即删除。"
+      },
+      {
+        icon: "💯",
+        title: "高质量",
+        description: "在整个转换过程中保持文档的原始质量。"
+      },
+      {
+        icon: "🆓",
+        title: "免费使用",
+        description: "无任何费用或隐藏收费，尽情使用我们的PDF工具。"
+      }
+    ]
+  }
 };
 
 export const tool: _tool = {
