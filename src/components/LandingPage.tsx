@@ -21,7 +21,8 @@ const HeroSection = ({ landing_page }: { landing_page: landing_page }) => {
 
 import type { tool } from "../content";
 import { FeaturesSection } from "./LandingPage/FeaturesSection";
-import { WhyChooseUs } from "./LandingPage/WhyChooseUS";
+import { TheSolutionYouCanRelyOn } from "./LandingPage/TheSolutionYouCanRelyOn";
+import { WhyChooseUs } from "./WhyChooseUs";
 
 
 const LandingPage = ({
@@ -42,10 +43,11 @@ const LandingPage = ({
         tool={tool}
         lang={lang}
       />
-      <WhyChooseUs
+      <TheSolutionYouCanRelyOn
         title={landing_page.why_us.title}
         description={landing_page.why_us.description}
       />
+      <WhyChooseUs description={landing_page.why_us.description} title={landing_page.wny_us.title} />
     </section>
   );
 };

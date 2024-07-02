@@ -1,9 +1,9 @@
-interface IWhyChooseUsProps {
+interface ITheSolutionYouCanRelyOnProps {
   title: string;
   description: string;
 }
 
-export function WhyChooseUs({ title, description }: IWhyChooseUsProps) {
+export function TheSolutionYouCanRelyOn({ title, description }: ITheSolutionYouCanRelyOnProps) {
   return (
     <div className="container why-us">
       <div className="content-wrapper">
