@@ -11,11 +11,11 @@ import {
 import CompressIcon from "../icons/compressIcon";
 import type { tool } from "../../content";
 import { LockClosedIcon } from "@heroicons/react/solid";
-import StampIcon from "../../NavBar/icons/StampIcon";
+import StampIcon from "pdfequips-navbar/icons/StampIcon";
 import OcrIcon from "./OcrIcon";
-import NumbersIcon from "../../NavBar/icons/Numbers";
+import NumbersIcon from "pdfequips-navbar/icons/Numbers";
 import OrganizePDFIcon from "../icons/OrganizePDF";
-import MarkdownIcon from "../../NavBar/icons/Markdown";
+import MarkdownIcon from "pdfequips-navbar/icons/Markdown";
 import { BsFillFileEarmarkWordFill } from "react-icons/bs";
 import { LuFileText } from "react-icons/lu";
 import { SiMicrosoftexcel, SiMicrosoftpowerpoint } from "react-icons/si";
