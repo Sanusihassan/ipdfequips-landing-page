@@ -2,7 +2,7 @@ export const landing_page = {
   hero: {
     title: "Edit PDFs Like a Pro with PDFEquips",
     description:
-      "Edit PDFs Like a Pro with PDFEquips! All the tools you need, free and easy to use.Merge, split, compress, convert, rotate, and add watermarks with just a few clicks.",
+      "PDFEquips offers free online PDF tools for professionals, students, and individuals to efficiently manage, edit, and optimize PDF files like experts, eliminating the need for costly software.",
   },
   features: {
     title: "How PDFEquips Can Simplify Your PDF Tasks",

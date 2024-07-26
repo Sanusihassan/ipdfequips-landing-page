@@ -13,7 +13,7 @@ export const landing_page: _landing_page = {
   hero: {
     title: "Éditez des PDFs comme un pro avec PDFEquips",
     description:
-      "Éditez des PDFs comme un pro avec PDFEquips ! Tous les outils dont vous avez besoin, gratuits et faciles à utiliser. Fusionnez, divisez, compressez, convertissez, faites pivoter et ajoutez des filigranes en quelques clics.",
+      "PDFEquips propose des outils PDF en ligne gratuits pour les professionnels, les étudiants et les particuliers afin de gérer, éditer et optimiser efficacement les fichiers PDF comme des experts, éliminant ainsi le besoin de logiciels coûteux.",
   },
   features: {
     title: "Comment PDFEquips peut simplifier vos tâches PDF",

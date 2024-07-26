@@ -13,7 +13,7 @@ export const landing_page: _landing_page = {
   hero: {
     title: "使用PDFEquips像专业人士一样编辑PDF",
     description:
-      "使用PDFEquips像专业人士一样编辑PDF！所有您需要的工具，免费且易于使用。只需点击几下即可合并、拆分、压缩、转换、旋转和添加水印。",
+      "PDFEquips 提供免费的在线 PDF 工具，供专业人士、学生和个人高效地管理、编辑和优化 PDF 文件，像专家一样，无需昂贵的软件。"
   },
   features: {
     title: "PDFEquips如何简化您的PDF任务",
