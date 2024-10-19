@@ -3,6 +3,7 @@
         const urlParams = new URLSearchParams(window.location.search);
         const token = urlParams.get("token");
         const logout = urlParams.get("logout");
+
         if (token) {
             if (typeof localStorage !== "undefined") {
                 localStorage.setItem("token", token);
@@ -15,6 +16,15 @@
             if (typeof localStorage !== "undefined") {
                 localStorage.removeItem("token");
             }
+
+            // Remove the userInfo cookie using plain JavaScript
+            deleteCookie("userInfo");
         }
     });
+
+    // Function to delete a cookie
+    function deleteCookie(name: string) {
+        document.cookie =
+            name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    }
 </script>
