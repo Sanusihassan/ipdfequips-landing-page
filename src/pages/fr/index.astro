@@ -3,7 +3,7 @@ const lang = "fr";
 import { landing_page, tool, footer } from "../../content/content-fr";
 import Header from "../../components/Header.astro";
 import { OpenGraph } from "pdfequips-open-graph/OpenGraph";
-import Footer from "../../components/Footer.astro";
+import { Footer } from "pdfequips-footer/src/Footer";
 import LandingPage from "../../components/LandingPage";
 import SaveTokenScript from "../../components/SaveTokenScript.astro";
 import "../../index.scss";
@@ -61,6 +61,6 @@ import Icons from "../../components/Icons.astro";
   <body>
     <Header lang={lang} />
     <LandingPage landing_page={landing_page} tool={tool} lang={lang} />
-    <Footer footer={footer} lang={lang} />
+    <Footer lang={lang} title="Outils PDF en ligne gratuits" />
   </body>
 </html>
