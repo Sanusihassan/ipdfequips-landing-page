@@ -5,9 +5,9 @@ export const landing_page = {
       "PDFEquips offers free online PDF tools for professionals, students, and individuals to efficiently manage, edit, and optimize PDF files like experts, eliminating the need for costly software.",
   },
   features: {
-    title: "How PDFEquips Can Simplify Your PDF Tasks",
+    title: "PDFEquips does it all in 1-Click",
     description:
-      "PDFEquips makes PDF management easy with all-in-one tools for converting, editing, and organizing files. Enjoy enhanced security, an intuitive interface, OCR tech, and batch processing to boost productivity. Perfect for professionals to get the most out of their PDFs.",
+      "Enhanced security, an intuitive interface, OCR tech, and batch processing to boost productivity. Perfect for professionals to get the most out of their PDFs.",
   },
   why_us: {
     title: "The PDF solution you can rely on",

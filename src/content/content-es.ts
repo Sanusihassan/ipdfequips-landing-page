@@ -16,9 +16,9 @@ export const landing_page: _landing_page = {
       "PDFEquips ofrece herramientas PDF en línea gratuitas para profesionales, estudiantes e individuos para gestionar, editar y optimizar archivos PDF de manera eficiente como expertos, eliminando la necesidad de software costoso.",
   },
   features: {
-    title: "Cómo PDFEquips puede simplificar tus tareas de PDF",
+    title: "PDFEquips lo hace todo con un solo clic",
     description:
-      "PDFEquips facilita la gestión de PDFs con herramientas todo en uno para convertir, editar y organizar archivos. Disfruta de seguridad mejorada, una interfaz intuitiva, tecnología OCR y procesamiento por lotes para aumentar la productividad. Perfecto para profesionales que quieren aprovechar al máximo sus PDFs.",
+      "Seguridad mejorada, una interfaz intuitiva, tecnología OCR y procesamiento por lotes para aumentar la productividad. Perfecto para profesionales que desean aprovechar al máximo sus PDFs.",
   },
   why_us: {
     title: "La solución PDF en la que puedes confiar",

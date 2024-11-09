@@ -16,9 +16,9 @@ export const landing_page: _landing_page = {
       "PDFEquips 提供免费的在线 PDF 工具，供专业人士、学生和个人高效地管理、编辑和优化 PDF 文件，像专家一样，无需昂贵的软件。"
   },
   features: {
-    title: "PDFEquips如何简化您的PDF任务",
+    title: "PDFEquips 一键完成所有操作",
     description:
-      "PDFEquips通过提供一体化工具来简化PDF管理，可用于文件转换、编辑和组织。享受增强的安全性、直观的界面、OCR技术和批处理功能，提高生产力。非常适合专业人士充分利用他们的PDF文件。",
+      "增强的安全性、直观的界面、OCR 技术和批量处理以提高生产力。非常适合专业人士充分利用他们的 PDF 文件。",
   },
   why_us: {
     title: "您可以依赖的PDF解决方案",
