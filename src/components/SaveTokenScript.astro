@@ -10,8 +10,8 @@
             }
 
             // Optionally remove the token from the URL
-            const currentPath = window.location.pathname;
-            window.history.replaceState({}, document.title, currentPath);
+            // const currentPath = window.location.pathname;
+            // window.history.replaceState({}, document.title, currentPath);
         } else if (logout) {
             if (typeof localStorage !== "undefined") {
                 localStorage.removeItem("token");
