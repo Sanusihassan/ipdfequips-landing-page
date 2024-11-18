@@ -11,7 +11,13 @@
         s1.setAttribute("crossorigin", "*");
         s0.parentNode.insertBefore(s1, s0);
     })();
+
+    Tawk_API.onLoad = function () {
+        // Override the function responsible for changing the document title
+        Tawk_API.setVisitorNotificationTitle = function () {};
+    };
 </script>
+
 <!--End of Tawk.to Script-->
 <script>
     document.addEventListener("DOMContentLoaded", function () {
