@@ -1,6 +1,6 @@
 ---
 const lang = "fr";
-import { landing_page, tool, footer } from "../../content/content-fr";
+import { landing_page, tool } from "../../content/content-fr";
 import Header from "../../components/Header.astro";
 import { OpenGraph } from "pdfequips-open-graph/OpenGraph";
 import { Footer } from "pdfequips-footer/components/Footer";
@@ -61,6 +61,10 @@ import Icons from "../../components/Icons.astro";
   <body>
     <Header lang={lang} />
     <LandingPage landing_page={landing_page} tool={tool} lang={lang} />
-    <Footer lang={lang} includeTools={false} title="Outils PDF en ligne gratuits" />
+    <Footer
+      lang={lang}
+      includeTools={false}
+      title="Outils PDF en ligne gratuits"
+    />
   </body>
 </html>
