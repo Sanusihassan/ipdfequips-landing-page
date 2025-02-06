@@ -11,16 +11,16 @@ import {
 import CompressIcon from "../icons/compressIcon";
 import type { tool } from "../../content";
 import { LockClosedIcon } from "@heroicons/react/solid";
-import StampIcon from "pdfequips-navbar/icons/StampIcon";
 import OcrIcon from "./OcrIcon";
-import NumbersIcon from "pdfequips-navbar/icons/Numbers";
 import OrganizePDFIcon from "../icons/OrganizePDF";
-import MarkdownIcon from "pdfequips-navbar/icons/Markdown";
 import { BsFillFileEarmarkWordFill } from "react-icons/bs";
 import { LuFileText } from "react-icons/lu";
 import { PiMicrosoftExcelLogo, PiMicrosoftPowerpointLogo } from "react-icons/pi";
 import { FaFilePdf } from "react-icons/fa6";
 import { CiGlobe } from "react-icons/ci";
+import MarkdownIcon from "../icons/Markdown"
+import StampIcon from "../icons/StampIcon"
+import NumbersIcon from "../icons/Numbers"
 
 export const FeaturesSection = ({
   tool,
