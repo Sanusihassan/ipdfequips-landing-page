@@ -251,6 +251,34 @@ export const tool: _tool = {
     type: ".pdf",
     to: "/organize-pdf",
   },
+  Edit_PDF: {
+    title: "पीडीएफ संपादित करें",
+    description: "हमारे सहज संपादक के साथ अपने PDF दस्तावेज़ों के पाठ, चित्र और लेआउट को संशोधित करें।",
+    color: "#3867d6",
+    type: ".pdf",
+    to: "/edit-pdf",
+  },
+  Crop_PDF: {
+    title: "पीडीएफ क्रॉप करें",
+    description: "आवश्यक सामग्री को हाइलाइट करने के लिए अपने PDF पृष्ठों को आसानी से क्रॉप करें।",
+    color: "#2d98da",
+    type: ".pdf",
+    to: "/crop-pdf",
+  },
+  PDF_Assistant: {
+    title: "पीडीएफ सहायक",
+    description: "डेटा निष्कर्षण और संक्षेपण जैसी उन्नत PDF कार्यों के लिए AI-संचालित सहायता का उपयोग करें।",
+    color: "#38ada9",
+    type: ".pdf",
+    to: "/assistant",
+  },
+  Merge_Pages: {
+    title: "पृष्ठ मर्ज करें (N-up)",
+    description: "कई PDF पृष्ठों को कुशलता से एक पृष्ठ में संयोजित करें, अनुकूलन योग्य लेआउट के साथ।",
+    color: "#27ae60",
+    type: ".pdf",
+    to: "/merge-pages",
+  },
 };
 
 export const footer: _footer = {

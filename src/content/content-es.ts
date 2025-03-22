@@ -252,6 +252,34 @@ export const tool: _tool = {
     type: ".pdf",
     to: "/organize-pdf",
   },
+  Edit_PDF: {
+    title: "Editar PDF",
+    description: "Modifica texto, imágenes y el diseño de tus documentos PDF con nuestro editor intuitivo.",
+    color: "#3867d6",
+    type: ".pdf",
+    to: "/edit-pdf",
+  },
+  Crop_PDF: {
+    title: "Recortar PDF",
+    description: "Recorta fácilmente tus páginas PDF para resaltar el contenido esencial.",
+    color: "#2d98da",
+    type: ".pdf",
+    to: "/crop-pdf",
+  },
+  PDF_Assistant: {
+    title: "Asistente PDF",
+    description: "Utiliza asistencia con IA para tareas avanzadas de PDF, como extracción de datos y resumen.",
+    color: "#38ada9",
+    type: ".pdf",
+    to: "/assistant",
+  },
+  Merge_Pages: {
+    title: "Combinar páginas (N-up)",
+    description: "Fusiona varias páginas de PDF en una sola con diseños personalizables.",
+    color: "#27ae60",
+    type: ".pdf",
+    to: "/merge-pages",
+  },
 };
 
 export const web2pdftool: _web2pdftool = {

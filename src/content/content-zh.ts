@@ -245,6 +245,34 @@ export const tool: _tool = {
     type: ".pdf",
     to: "/organize-pdf",
   },
+  Edit_PDF: {
+    title: "编辑 PDF",
+    description: "使用我们的直观编辑器修改 PDF 文档的文本、图像和布局。",
+    color: "#3867d6",
+    type: ".pdf",
+    to: "/edit-pdf",
+  },
+  Crop_PDF: {
+    title: "裁剪 PDF",
+    description: "轻松裁剪 PDF 页面，以突出显示重要内容。",
+    color: "#2d98da",
+    type: ".pdf",
+    to: "/crop-pdf",
+  },
+  PDF_Assistant: {
+    title: "PDF 助手",
+    description: "利用 AI 辅助完成高级 PDF 任务，如数据提取和摘要。",
+    color: "#38ada9",
+    type: ".pdf",
+    to: "/assistant",
+  },
+  Merge_Pages: {
+    title: "合并页面 (N-up)",
+    description: "使用可自定义布局高效合并多个 PDF 页面到单个页面。",
+    color: "#27ae60",
+    type: ".pdf",
+    to: "/merge-pages",
+  },
 };
 
 export const downloadFile: _downloadFile = {

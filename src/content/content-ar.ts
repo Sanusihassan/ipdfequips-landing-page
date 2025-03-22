@@ -252,6 +252,34 @@ export const tool: _tool = {
     type: ".pdf",
     to: "/organize-pdf",
   },
+  Edit_PDF: {
+    title: "تحرير PDF",
+    description: "قم بتعديل النصوص والصور وتنسيق مستندات PDF بسهولة باستخدام محررنا المبتكر.",
+    color: "#3867d6",
+    type: ".pdf",
+    to: "/edit-pdf",
+  },
+  Crop_PDF: {
+    title: "اقتصاص PDF",
+    description: "قم بقص صفحات PDF بسهولة لإبراز المحتوى المهم.",
+    color: "#2d98da",
+    type: ".pdf",
+    to: "/crop-pdf",
+  },
+  PDF_Assistant: {
+    title: "مساعد PDF",
+    description: "استخدم المساعد الذكي لتنفيذ مهام PDF المتقدمة، مثل استخراج البيانات والتلخيص.",
+    color: "#38ada9",
+    type: ".pdf",
+    to: "/assistant",
+  },
+  Merge_Pages: {
+    title: "دمج الصفحات (N-up)",
+    description: "ادمج عدة صفحات PDF في صفحة واحدة بكفاءة مع تخطيطات مخصصة.",
+    color: "#27ae60",
+    type: ".pdf",
+    to: "/merge-pages",
+  },
 };
 
 export const web2pdftool: _web2pdftool = {

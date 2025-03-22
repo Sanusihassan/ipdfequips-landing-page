@@ -259,6 +259,34 @@ export const tool = {
     type: ".pdf",
     to: "/organize-pdf",
   },
+  Edit_PDF: {
+    title: "Edit PDF",
+    description: "Modify text, images, and layout of your PDF documents with our intuitive editor.",
+    color: "#3867d6",
+    type: ".pdf",
+    to: "/edit-pdf",
+  },
+  Crop_PDF: {
+    title: "Crop PDF",
+    description: "Easily crop and trim your PDF pages to highlight essential content.",
+    color: "#2d98da",
+    type: ".pdf",
+    to: "/crop-pdf",
+  },
+  PDF_Assistant: {
+    title: "PDF Assistant",
+    description: "Utilize AI-powered assistance for advanced PDF tasks, including data extraction and summarization.",
+    color: "#38ada9",
+    type: ".pdf",
+    to: "/assistant",
+  },
+  Merge_Pages: {
+    title: "Merge Pages (N-up)",
+    description: "Combine multiple PDF pages into a single page efficiently with customizable layouts.",
+    color: "#27ae60",
+    type: ".pdf",
+    to: "/merge-pages",
+  },
 };
 // translate the values of this object to french
 export const web2pdftool = {

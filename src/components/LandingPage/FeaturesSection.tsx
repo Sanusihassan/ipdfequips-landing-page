@@ -14,13 +14,17 @@ import { LockClosedIcon } from "@heroicons/react/solid";
 import OcrIcon from "./OcrIcon";
 import OrganizePDFIcon from "../icons/OrganizePDF";
 import { BsFillFileEarmarkWordFill } from "react-icons/bs";
-import { LuFileText } from "react-icons/lu";
+import { LuFileText, LuLayoutDashboard } from "react-icons/lu";
 import { PiMicrosoftExcelLogo, PiMicrosoftPowerpointLogo } from "react-icons/pi";
 import { FaFilePdf } from "react-icons/fa6";
 import { CiGlobe } from "react-icons/ci";
 import MarkdownIcon from "../icons/Markdown"
 import StampIcon from "../icons/StampIcon"
 import NumbersIcon from "../icons/Numbers"
+import EditPDFIcon from "pdfequips-navbar/icons/EditPDF";
+import CropIcon from "pdfequips-navbar/icons/CropIcon"
+import AssistantIcon from "pdfequips-navbar/icons/AIIcon"
+import AIIcon from "pdfequips-navbar/icons/AIIcon";
 
 export const FeaturesSection = ({
   tool,
@@ -45,6 +49,13 @@ export const FeaturesSection = ({
   };
   const featureCards = [
     {
+      title: tool.Edit_PDF.title,
+      description: tool.Edit_PDF.description,
+      to: `${langPath}${tool.Edit_PDF.to}`,
+      color: tool.Edit_PDF.color as string,
+      icon: EditPDFIcon
+    },
+    {
       title: tool.Split_PDF.title,
       description: tool.Split_PDF.description,
       to: `${langPath}${tool.Split_PDF.to}`,
@@ -57,6 +68,13 @@ export const FeaturesSection = ({
       to: `${langPath}${tool.Compress_PDF.to}`,
       color: tool.Compress_PDF.color as string,
       icon: CompressIcon,
+    },
+    {
+      title: tool.PDF_Assistant.title,
+      description: tool.PDF_Assistant.description,
+      to: `${langPath}${tool.PDF_Assistant.to}`,
+      color: tool.PDF_Assistant.color as string,
+      icon: AssistantIcon,
     },
     {
       title: tool.Translate_PDF.title,
@@ -185,11 +203,11 @@ export const FeaturesSection = ({
       icon: CiGlobe,
     },
     {
-      title: tool.PDF_to_HTML.title,
-      description: tool.PDF_to_HTML.description as string,
-      to: `${langPath}${tool.PDF_to_HTML.to}`,
-      color: tool.PDF_to_HTML.color as string,
-      icon: CodeIcon,
+      title: tool.Merge_Pages.title,
+      description: tool.Merge_Pages.description,
+      to: `${langPath}${tool.Merge_Pages.to}`,
+      color: tool.Merge_Pages.color as string,
+      icon: LuLayoutDashboard,
     },
     {
       title: tool.JPG_to_PDF.title,
@@ -204,6 +222,20 @@ export const FeaturesSection = ({
       to: `${langPath}${tool.PDF_to_Markdown.to}`,
       color: tool.PDF_to_Markdown.color as string,
       icon: MarkdownIcon,
+    },
+    {
+      title: tool.Crop_PDF.title,
+      description: tool.Crop_PDF.description,
+      to: `${langPath}${tool.Crop_PDF.to}`,
+      color: tool.Crop_PDF.color as string,
+      icon: CropIcon
+    },
+    {
+      title: tool.PDF_to_HTML.title,
+      description: tool.PDF_to_HTML.description as string,
+      to: `${langPath}${tool.PDF_to_HTML.to}`,
+      color: tool.PDF_to_HTML.color as string,
+      icon: CodeIcon,
     },
   ];
 
@@ -270,7 +302,10 @@ export const FeaturesSection = ({
                             card.icon === StampIcon ||
                             card.icon === OcrIcon ||
                             card.icon === NumbersIcon ||
-                            card.icon === OrganizePDFIcon
+                            card.icon === OrganizePDFIcon ||
+                            card.icon === EditPDFIcon ||
+                            card.icon === CropIcon ||
+                            card.icon === AIIcon
                             ? "fill"
                             : "color"]: card.color,
                         },
