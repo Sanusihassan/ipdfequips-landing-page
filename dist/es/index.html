@@ -15,7 +15,13 @@
         // Override the function responsible for changing the document title
         Tawk_API.setVisitorNotificationTitle = function () {};
     };
-</script> <!--End of Tawk.to Script--><!-- <script
+</script> <!--End of Tawk.to Script--> <!-- register sw --><script>
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+            navigator.serviceWorker.register("/sw.js");
+        });
+    }
+</script><!-- <script
 			type="application/ld+json"
 			dangerouslySetInnerHTML={{
 				__html: JSON.stringify(websiteSchema),
