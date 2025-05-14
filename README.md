@@ -1,47 +1,50 @@
-# Astro Starter Kit: Minimal
+# PDFEquips Landing Page
 
-```sh
-npm create astro@latest -- --template minimal
-```
+This repository contains the **landing page** for [PDFEquips](https://www.pdfequips.com/), a web-based platform offering powerful and easy-to-use PDF tools such as merging, signing, cropping, and converting PDF files.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## 🌍 Multilingual Support
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+To better serve a global audience, the landing page is available in multiple languages. Each localized version has its own dedicated route:
 
-## 🚀 Project Structure
+- 🌐 [English (Default)](https://www.pdfequips.com/)
+- 🌍 [Arabic](https://www.pdfequips.com/ar/)
+- 🌎 [Spanish](https://www.pdfequips.com/es/)
+- 🌍 [French](https://www.pdfequips.com/fr/)
+- 🌏 [Hindi](https://www.pdfequips.com/hi/)
+- 🌏 [Chinese (Simplified)](https://www.pdfequips.com/zh/)
 
-Inside of your Astro project, you'll see the following folders and files:
+These pages are fully localized to enhance user experience and improve accessibility for non-English speakers.
 
-```text
+## 🛠️ Tech Stack
+
+This project is built using the following technologies:
+
+- **[Astro](https://astro.build/)** – Modern static site builder for fast performance
+- **TypeScript** – Static typing for better development experience and maintainability
+- **JavaScript** – Dynamic behavior and interactivity
+- **SCSS** – Modern CSS with variables, nesting, and mixins for scalable styles
+
+## 📁 Project Structure
+
 /
-├── public/
+├── public/ # Static assets
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+│ ├── pages/ # Page routes including /ar, /es, /fr, /hi, /zh
+│ ├── components/ # Reusable UI components
+│ └── styles/ # SCSS styling
+└── astro.config.mjs # Astro configuration
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 🔗 Live Site
 
-Any static assets, like images, can be placed in the `public/` directory.
+Visit the live website here:  
+👉 [https://www.pdfequips.com/](https://www.pdfequips.com/)
 
-## 🧞 Commands
+## 📄 License
 
-All commands are run from the root of the project, from a terminal:
+This project is licensed under the **MIT License**.  
+Feel free to fork, adapt, or contribute!
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+> Built with ❤️ by Sanusi Hassan
