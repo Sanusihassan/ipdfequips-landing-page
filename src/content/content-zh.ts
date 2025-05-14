@@ -23,7 +23,7 @@ export const landing_page: _landing_page = {
   why_us: {
     title: "您可以依赖的PDF解决方案",
     description:
-      "PDFEquips是您轻松管理PDF的首选网络应用程序。获取您需要的所有功能，在一个安全的地方处理数字文档。",
+      "PDFEquips 是您轻松管理 PDF 的首选网页应用。获取您喜爱的所有功能，在一个安全的平台上处理数字文档。",
   },
   why_choose_us: {
     title: "为什么选择PDFEquips？",

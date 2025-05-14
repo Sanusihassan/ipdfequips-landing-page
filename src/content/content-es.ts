@@ -23,7 +23,7 @@ export const landing_page: _landing_page = {
   why_us: {
     title: "La solución PDF en la que puedes confiar",
     description:
-      "PDFEquips es tu aplicación web para la gestión fácil de PDFs. Obtén todas las funciones que necesitas para trabajar con documentos digitales, todo en un lugar seguro.",
+      "PDFEquips es tu aplicación web de confianza para gestionar archivos PDF fácilmente. Obtén todas las funciones que te encantan para trabajar con documentos digitales, todo en un solo lugar seguro.",
   },
   why_choose_us: {
     title: "¿Por qué elegir PDFEquips?",

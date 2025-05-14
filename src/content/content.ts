@@ -12,7 +12,7 @@ export const landing_page = {
   why_us: {
     title: "The PDF solution you can rely on",
     description:
-      "PDFEquips is your go-to web app for easy PDF management. Get all the features you need to work with digital documents, all in one secure place.",
+      "PDFEquips is your go-to web app for easy PDF management. Get all the features you love to work with digital documents, all in one secure place.",
   },
   why_choose_us: {
     title: "Why Choose Us?",
