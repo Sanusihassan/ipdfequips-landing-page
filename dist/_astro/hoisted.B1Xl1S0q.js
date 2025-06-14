@@ -1,0 +1,1 @@
+import"./hoisted.DFvpB4Jw.js";"serviceWorker"in navigator&&window.addEventListener("load",()=>{navigator.serviceWorker.register("/sw.js",{scope:"/"}).then(e=>{console.log("SW registered: ",e),e.addEventListener("updatefound",()=>{console.log("SW update found")})}).catch(e=>{console.log("SW registration failed: ",e)})});

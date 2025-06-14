@@ -1,239 +1,172 @@
 <script type="text/javascript">
-    // src/utils/installabilityChecker.js
-    // Utility to check and ensure PWA installability criteria are met
+  // src/utils/installPromptHandler.js
+  // Simplified handler that allows browser's native install prompt
 
-    class PWAInstallabilityChecker {
-        constructor() {
-            this.criteria = {
-                manifest: false,
-                serviceWorker: false,
-                httpsOrLocalhost: false,
-                icons: false,
-                startUrl: false,
-                display: false,
-                userEngagement: false,
-            };
-        }
-
-        async checkAllCriteria() {
-            await this.checkManifest();
-            this.checkServiceWorker();
-            this.checkHTTPS();
-            this.checkUserEngagement();
-
-            const allMet = Object.values(this.criteria).every(
-                (criterion) => criterion,
-            );
-
-            console.log("PWA Installability Criteria:", this.criteria);
-            console.log("All criteria met:", allMet);
-
-            return {
-                installable: allMet,
-                criteria: this.criteria,
-            };
-        }
-
-        async checkManifest() {
-            try {
-                const manifestLink = document.querySelector(
-                    'link[rel="manifest"]',
-                );
-                if (!manifestLink) {
-                    console.warn("No manifest link found");
-                    return;
-                }
-
-                const response = await fetch(manifestLink.href);
-                const manifest = await response.json();
-
-                // Check required manifest fields
-                const requiredFields = [
-                    "name",
-                    "start_url",
-                    "display",
-                    "icons",
-                ];
-                const hasRequiredFields = requiredFields.every(
-                    (field) => manifest[field],
-                );
-
-                if (!hasRequiredFields) {
-                    console.warn(
-                        "Manifest missing required fields:",
-                        requiredFields.filter((field) => !manifest[field]),
-                    );
-                    return;
-                }
-
-                // Check display mode
-                const validDisplayModes = [
-                    "standalone",
-                    "fullscreen",
-                    "minimal-ui",
-                ];
-                if (!validDisplayModes.includes(manifest.display)) {
-                    console.warn("Invalid display mode:", manifest.display);
-                    return;
-                }
-
-                // Check icons (must have at least 192x192)
-                const hasValidIcons = manifest.icons.some((icon) => {
-                    const sizes = icon.sizes.split("x").map((s) => parseInt(s));
-                    return sizes[0] >= 192 && sizes[1] >= 192;
-                });
-
-                if (!hasValidIcons) {
-                    console.warn("No icon with size >= 192x192 found");
-                    return;
-                }
-
-                this.criteria.manifest = true;
-                this.criteria.icons = hasValidIcons;
-                this.criteria.startUrl = !!manifest.start_url;
-                this.criteria.display = validDisplayModes.includes(
-                    manifest.display,
-                );
-            } catch (error) {
-                console.error("Error checking manifest:", error);
-            }
-        }
-
-        checkServiceWorker() {
-            if ("serviceWorker" in navigator) {
-                navigator.serviceWorker
-                    .getRegistrations()
-                    .then((registrations) => {
-                        this.criteria.serviceWorker = registrations.length > 0;
-                        if (registrations.length === 0) {
-                            console.warn("No service worker registered");
-                        }
-                    });
-            } else {
-                console.warn("Service Worker not supported");
-            }
-        }
-
-        checkHTTPS() {
-            const isHTTPS = location.protocol === "https:";
-            const isLocalhost =
-                location.hostname === "localhost" ||
-                location.hostname === "127.0.0.1" ||
-                location.hostname === "::1";
-
-            this.criteria.httpsOrLocalhost = isHTTPS || isLocalhost;
-
-            if (!this.criteria.httpsOrLocalhost) {
-                console.warn("Site must be served over HTTPS or localhost");
-            }
-        }
-
-        checkUserEngagement() {
-            // Check if user has interacted with the page
-            // This is automatically tracked by browsers, but we can simulate it
-            let hasEngagement = false;
-
-            const events = ["click", "keydown", "touchstart"];
-            events.forEach((event) => {
-                document.addEventListener(
-                    event,
-                    () => {
-                        hasEngagement = true;
-                        this.criteria.userEngagement = true;
-                    },
-                    { once: true },
-                );
-            });
-
-            // For immediate check, assume engagement after page load
-            setTimeout(() => {
-                if (!hasEngagement) {
-                    this.criteria.userEngagement = true; // Assume engagement for testing
-                }
-            }, 1000);
-        }
-
-        // Method to force check for beforeinstallprompt event
-        listenForInstallPrompt() {
-            let promptEvent = null;
-
-            window.addEventListener("beforeinstallprompt", (e) => {
-                console.log(
-                    "✅ beforeinstallprompt event fired - PWA is installable!",
-                );
-
-                // Prevent the mini-infobar from appearing
-                e.preventDefault();
-
-                // Store the event for later use
-                promptEvent = e;
-
-                // Dispatch custom event to notify app
-                window.dispatchEvent(
-                    new CustomEvent("pwa-installable", {
-                        detail: { promptEvent: e },
-                    }),
-                );
-            });
-
-            window.addEventListener("appinstalled", () => {
-                console.log("✅ PWA was installed successfully");
-                promptEvent = null;
-            });
-
-            return promptEvent;
-        }
-
-        // Get detailed installability info (Chrome DevTools API)
-        async getInstallabilityDetails() {
-            if ("getInstalledRelatedApps" in navigator) {
-                try {
-                    const relatedApps =
-                        await navigator.getInstalledRelatedApps();
-                    console.log("Related apps:", relatedApps);
-                    return relatedApps;
-                } catch (error) {
-                    console.log(
-                        "getInstalledRelatedApps not available:",
-                        error,
-                    );
-                }
-            }
-            return [];
-        }
+  class InstallPromptHandler {
+    constructor() {
+      this.deferredPrompt = null;
+      this.isInstalled = false;
+      this.init();
     }
 
-    // Auto-run checker when module loads
-    if (typeof window !== "undefined") {
-        const checker = new PWAInstallabilityChecker();
+    init() {
+      // Check if already installed
+      this.checkIfInstalled();
 
-        // Check criteria when page loads
-        window.addEventListener("load", async () => {
-            await checker.checkAllCriteria();
-            checker.listenForInstallPrompt();
-        });
-
-        // Make checker available globally for debugging
-        window.PWAChecker = checker;
+      // Listen for install events
+      this.setupEventListeners();
     }
 
-    console.log("PWAInstallabilityChecker ", PWAInstallabilityChecker);
-    // Import and initialize the installability checker
+    checkIfInstalled() {
+      // Check if running in standalone mode
+      if (window.matchMedia("(display-mode: standalone)").matches) {
+        this.isInstalled = true;
+        return true;
+      }
 
-    // Initialize checker
-    const checker = new PWAInstallabilityChecker();
+      // Check if running as PWA on iOS
+      if (window.navigator.standalone === true) {
+        this.isInstalled = true;
+        return true;
+      }
 
-    // Listen for install prompt
-    window.addEventListener("pwa-installable", (event) => {
-        console.log("PWA is installable!");
-        // The browser will show its native install prompt automatically
-        // You can also show your own UI here if needed
-    });
+      return false;
+    }
 
-    // Check if already installed
-    window.addEventListener("load", () => {
-        if (window.matchMedia("(display-mode: standalone)").matches) {
-            console.log("PWA is already installed");
-        }
-    });
+    setupEventListeners() {
+      // Handle beforeinstallprompt - DON'T prevent default to allow automatic banner
+      window.addEventListener("beforeinstallprompt", (e) => {
+        // Store the event for potential custom use later
+        this.deferredPrompt = e;
+
+        // DON'T call e.preventDefault() - let browser show native prompt
+        // e.preventDefault(); // <-- Remove this line!
+
+        // Dispatch custom event for your app to know it's installable
+        window.dispatchEvent(
+          new CustomEvent("pwa-installable", {
+            detail: {
+              canInstall: true,
+              promptEvent: e,
+            },
+          })
+        );
+      });
+
+      // Handle successful installation
+      window.addEventListener("appinstalled", (e) => {
+        this.isInstalled = true;
+        this.deferredPrompt = null;
+
+        // Dispatch custom event
+        window.dispatchEvent(new CustomEvent("pwa-installed"));
+      });
+    }
+
+    // Optional: Method to trigger install programmatically (if you prevented default)
+    async showInstallPrompt() {
+      if (!this.deferredPrompt) {
+        return false;
+      }
+
+      try {
+        // Show the install prompt
+        this.deferredPrompt.prompt();
+
+        // Wait for user choice
+        const result = await this.deferredPrompt.userChoice;
+
+        // Clear the deferred prompt
+        this.deferredPrompt = null;
+
+        return result.outcome === "accepted";
+      } catch (error) {
+        console.error("Error showing install prompt:", error);
+        return false;
+      }
+    }
+
+    // Check if install prompt is available
+    canShowInstallPrompt() {
+      return !!this.deferredPrompt && !this.isInstalled;
+    }
+
+    // Get installation status
+    getInstallationStatus() {
+      return {
+        isInstalled: this.isInstalled,
+        canInstall: !!this.deferredPrompt,
+        isStandalone: window.matchMedia("(display-mode: standalone)").matches,
+      };
+    }
+  }
+
+  // Initialize the handler
+  const installHandler = new InstallPromptHandler();
+
+  // Make it available globally for debugging
+  if (typeof window !== "undefined") {
+    window.InstallHandler = installHandler;
+  }
+
+  //   code use
+
+  // Simple install prompt handler that allows native browser prompts
+  let deferredPrompt = null;
+  let isInstalled = false;
+
+  // Check if already installed
+  function checkInstallStatus() {
+    if (
+      window.matchMedia("(display-mode: standalone)").matches ||
+      window.navigator.standalone === true
+    ) {
+      isInstalled = true;
+      return true;
+    }
+    return false;
+  }
+
+  // Handle beforeinstallprompt - Allow native prompt to show
+  window.addEventListener("beforeinstallprompt", (e) => {
+    // Store the event (optional, for custom triggers later)
+    deferredPrompt = e;
+
+    // DON'T prevent default - let browser show native install prompt
+    // This allows the automatic install banner/button to appear
+
+    // Optional: Dispatch custom event for your app
+    window.dispatchEvent(
+      new CustomEvent("pwa-can-install", {
+        detail: { canInstall: true },
+      })
+    );
+  });
+
+  // Handle successful installation
+  window.addEventListener("appinstalled", () => {
+    isInstalled = true;
+    deferredPrompt = null;
+  });
+
+  // Check install status on load
+  window.addEventListener("load", () => {
+    checkInstallStatus();
+  });
+
+  // Optional: Custom install function (if you want to trigger manually)
+  window.triggerInstall = async function () {
+    if (deferredPrompt && !isInstalled) {
+      try {
+        deferredPrompt.prompt();
+        const result = await deferredPrompt.userChoice;
+        deferredPrompt = null;
+        return result.outcome === "accepted";
+      } catch (error) {
+        console.error("Install error:", error);
+        return false;
+      }
+    }
+    return false;
+  };
 </script>
