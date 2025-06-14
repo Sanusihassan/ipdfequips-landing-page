@@ -8,6 +8,8 @@ import SaveTokenScript from "../components/SaveTokenScript.astro";
 import "../index.scss";
 import Analytics from "../components/Analytics.astro";
 import Icons from "../components/Icons.astro";
+// @ts-ignore
+import InstallabilityChecker from "../components/InstallabilityChecker.astro";
 // import Alternatives from "../components/Alternatives.astro";
 const lang = "";
 // const websiteSchema = {
@@ -73,11 +75,37 @@ const lang = "";
   <body>
     <Header />
     <LandingPage landing_page={landing_page} tool={tool} lang={lang} />
+    <!-- PWA Install Prompt -->
     <Footer
       lang={lang}
       includeTools={false}
       title="Free Online PDF Tools"
       includeTools={false}
     />
+    <InstallabilityChecker />
+
+    <!-- Service Worker Registration -->
+    <script>
+      // Register service worker for offline functionality
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/sw.js", {
+              scope: "/",
+            })
+            .then((registration) => {
+              console.log("SW registered: ", registration);
+
+              // Check for updates
+              registration.addEventListener("updatefound", () => {
+                console.log("SW update found");
+              });
+            })
+            .catch((registrationError) => {
+              console.log("SW registration failed: ", registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
