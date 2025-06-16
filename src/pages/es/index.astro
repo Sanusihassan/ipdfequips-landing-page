@@ -7,6 +7,7 @@ import LandingPage from "../../components/LandingPage";
 import SaveTokenScript from "../../components/SaveTokenScript.astro";
 import "../../index.scss";
 import Icons from "../../components/Icons.astro";
+import { ConditionalAdsense } from "../../components/ConditionalAdsense";
 // import Alternatives from "../../components/Alternatives.astro";
 const lang = "es";
 ---
@@ -49,17 +50,13 @@ const lang = "es";
 			}}></script> -->
     <meta http-equiv="Content-Language" content={lang} />
     <!-- <Alternatives /> -->
-    <meta name="google-adsense-account" content="ca-pub-7801483217621867" />
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7801483217621867"
-      cross-origin="anonymous"></script>
     <meta
       name="ahrefs-site-verification"
       content="a532671b5b7f09bad30e7e65542ecf2f8f28a1ef5a25b2bec358924427540367"
     />
   </head>
   <body>
+    <ConditionalAdsense client:load />
     <Header lang={lang} />
     <LandingPage landing_page={landing_page} tool={tool} lang={lang} />
     <Footer
