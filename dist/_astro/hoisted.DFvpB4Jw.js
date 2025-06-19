@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",function(){const e=new URLSearchParams(window.location.search),o=e.get("token"),t=e.get("logout");o?typeof localStorage<"u"&&localStorage.setItem("token",o):t&&(typeof localStorage<"u"&&localStorage.removeItem("token"),n("userInfo"))});function n(e){document.cookie=e+"=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"}
