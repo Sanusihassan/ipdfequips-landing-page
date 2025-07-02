@@ -69,8 +69,8 @@ export const tool: _tool = {
     to: "/compress-pdf",
   },
   Translate_PDF: {
-    title: "翻译 PDF",
-    description: "将 PDF 文件中的文本翻译成另一种语言",
+    title: "翻译 PDF 和 WORD 文件",
+    description: "深度准确的 AI 驱动翻译。保留布局，支持多种语言",
     color: "#185abc",
     type: ".pdf",
     to: "/translate-pdf",

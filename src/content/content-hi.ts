@@ -67,8 +67,8 @@ export const tool: _tool = {
     to: "/compress-pdf",
   },
   Translate_PDF: {
-    title: "PDF अनुवाद करें",
-    description: "एक PDF फ़ाइल में टेक्स्ट को दूसरी भाषा में अनुवाद करें",
+    title: "PDF और WORD फ़ाइलों का अनुवाद करें",
+    description: "सटीक AI-संचालित अनुवाद। लेआउट को बनाए रखें, कई भाषाओं का समर्थन करें",
     color: "#185abc",
     type: ".pdf",
     to: "/translate-pdf",

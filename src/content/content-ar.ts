@@ -90,8 +90,8 @@ export const tool: _tool = {
     to: "/unlock-pdf",
   },
   Translate_PDF: {
-    title: "ترجمة PDF",
-    description: "ترجمة النص في ملف PDF إلى لغة أخرى",
+    title: "ترجمة ملفات PDF و WORD",
+    description: "ترجمة دقيقة مدعومة بالذكاء الاصطناعي. الحفاظ على التنسيق ودعم لغات متعددة",
     color: "#185abc",
     type: ".pdf",
     to: "/translate-pdf",
