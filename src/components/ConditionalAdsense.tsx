@@ -2,6 +2,7 @@ import { fetchSubscriptionStatus } from "fetch-subscription-status";
 import { useEffect } from "react"
 
 export const ConditionalAdsense = () => {
+    if (process.env.NODE_ENV === "development") { return null; }
     useEffect(() => {
         const loadAdSense = async () => {
             const status = await fetchSubscriptionStatus();

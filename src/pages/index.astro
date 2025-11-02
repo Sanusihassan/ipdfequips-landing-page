@@ -1,6 +1,6 @@
 ---
 import { landing_page, tool } from "../content/content";
-import Header from "../components/Header.astro";
+import {HeaderWrapper} from "../components/HeaderWrapper";
 import { OpenGraph } from "pdfequips-open-graph/OpenGraph";
 import LandingPage from "../components/LandingPage";
 import { Footer } from "pdfequips-footer/components/Footer";
@@ -68,7 +68,7 @@ const lang = "";
   </head>
   <body>
     <ConditionalAdsense client:load />
-    <Header />
+    <HeaderWrapper client:load lang={lang} />
     <LandingPage landing_page={landing_page} tool={tool} lang={lang} />
     <Footer
       lang={lang}

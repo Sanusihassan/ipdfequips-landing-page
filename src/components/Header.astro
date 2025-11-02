@@ -1,8 +1,6 @@
 ---
-import Navbar from "pdfequips-navbar/NavBar";
 const { lang } = Astro.props;
+import {HeaderWrapper} from "./HeaderWrapper";
 ---
 
-<header>
-    <Navbar client:load path="" lang={lang ? lang : ""} />
-</header>
+<HeaderWrapper />

@@ -69,8 +69,8 @@ export const tool: _tool = {
     to: "/compress-pdf",
   },
   Translate_PDF: {
-    title: "翻译 PDF 和 WORD 文件",
-    description: "深度准确的 AI 驱动翻译。保留布局，支持多种语言",
+    title: "翻译 PDF、WORD 和 PowerPoint 文件",
+    description: "使用人工智能进行深度精准的文档翻译。保留格式和设计，支持多种语言",
     color: "#185abc",
     type: ".pdf",
     to: "/translate-pdf",
@@ -273,6 +273,14 @@ export const tool: _tool = {
     type: ".pdf",
     to: "/merge-pages",
   },
+  Image_to_PDF: {
+    title: "图像转 PDF",
+    seoTitle: "将图像转换为 PDF - 免费在线工具",
+    description: "将图像文件（JPG、PNG、BMP、TIFF、GIF、SVG、WebP、HEIF）转换为 PDF 文档",
+    color: "#3498db",
+    type: "image",
+    to: "/image-to-pdf",
+  }
 };
 
 export const downloadFile: _downloadFile = {

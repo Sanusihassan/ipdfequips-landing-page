@@ -93,8 +93,8 @@ export const tool = {
     to: "/unlock-pdf",
   },
   Translate_PDF: {
-    title: "Translate PDF & WORD Files",
-    description: "Deep accurate AI-powered translation. Preserve layout, support multiple languages",
+    title: "Translate PDF, WORD & PowerPoint Files",
+    description: "Deep accurate document translation with AI. Keep the format and design, and supports multiple languages",
     color: "#185abc",
     type: ".pdf",
     to: "/translate-pdf",
@@ -286,6 +286,14 @@ export const tool = {
     color: "#27ae60",
     type: ".pdf",
     to: "/merge-pages",
+  },
+  Image_to_PDF: {
+    title: "Image to PDF",
+    seoTitle: "Convert Images to PDF - Free Online Tool",
+    description: "Convert image files (JPG, PNG, BMP, TIFF, GIF, SVG, WebP, HEIF) to PDF documents",
+    color: "#3498db",
+    type: "image",
+    to: "/image-to-pdf",
   },
 };
 // translate the values of this object to french

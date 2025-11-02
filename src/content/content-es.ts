@@ -85,8 +85,8 @@ export const tool: _tool = {
     to: "/unlock-pdf",
   },
   Translate_PDF: {
-    title: "Traducir archivos PDF y WORD",
-    description: "Traducción precisa con IA avanzada. Conserva el formato y admite varios idiomas",
+    title: "Traducir archivos PDF, WORD y PowerPoint",
+    description: "Traducción precisa y profunda de documentos con IA. Mantén el formato y el diseño, y admite varios idiomas",
     color: "#185abc",
     type: ".pdf",
     to: "/translate-pdf",
@@ -280,6 +280,14 @@ export const tool: _tool = {
     type: ".pdf",
     to: "/merge-pages",
   },
+  Image_to_PDF: {
+    title: "Imagen a PDF",
+    seoTitle: "Convertir Imágenes a PDF - Convertidor gratuito",
+    description: "Convierte archivos de imagen (JPG, PNG, BMP, TIFF, GIF, SVG, WebP, HEIF) a documentos PDF",
+    color: "#3498db",
+    type: "image",
+    to: "/image-to-pdf",
+  }
 };
 
 export const web2pdftool: _web2pdftool = {

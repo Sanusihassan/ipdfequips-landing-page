@@ -67,8 +67,8 @@ export const tool: _tool = {
     to: "/compress-pdf",
   },
   Translate_PDF: {
-    title: "PDF और WORD फ़ाइलों का अनुवाद करें",
-    description: "सटीक AI-संचालित अनुवाद। लेआउट को बनाए रखें, कई भाषाओं का समर्थन करें",
+    title: "PDF, WORD और PowerPoint फ़ाइलों का अनुवाद करें",
+    description: "एआई के साथ गहरी और सटीक दस्तावेज़ अनुवाद। फ़ॉर्मेट और डिज़ाइन बनाए रखें, और कई भाषाओं का समर्थन करता है",
     color: "#185abc",
     type: ".pdf",
     to: "/translate-pdf",
@@ -279,6 +279,14 @@ export const tool: _tool = {
     type: ".pdf",
     to: "/merge-pages",
   },
+  Image_to_PDF: {
+    title: "छवि को PDF में बदलें",
+    seoTitle: "छवियों को PDF में ऑनलाइन बदलें - मुफ्त कनवर्टर",
+    description: "छवि फाइलों (JPG, PNG, BMP, TIFF, GIF, SVG, WebP, HEIF) को PDF दस्तावेजों में बदलें",
+    color: "#3498db",
+    type: "image",
+    to: "/image-to-pdf",
+  }
 };
 
 export const footer: _footer = {

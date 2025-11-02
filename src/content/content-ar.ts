@@ -90,8 +90,8 @@ export const tool: _tool = {
     to: "/unlock-pdf",
   },
   Translate_PDF: {
-    title: "ترجمة ملفات PDF و WORD",
-    description: "ترجمة دقيقة مدعومة بالذكاء الاصطناعي. الحفاظ على التنسيق ودعم لغات متعددة",
+    title: "ترجمة ملفات PDF وWORD وPowerPoint",
+    description: "ترجمة دقيقة وعميقة للمستندات باستخدام الذكاء الاصطناعي مع الحفاظ على التنسيق والتصميم ودعم لغات متعددة",
     color: "#185abc",
     type: ".pdf",
     to: "/translate-pdf",
@@ -280,6 +280,14 @@ export const tool: _tool = {
     type: ".pdf",
     to: "/merge-pages",
   },
+  Image_to_PDF: {
+    title: "تحويل الصور إلى PDF",
+    seoTitle: "تحويل الصور إلى ملف PDF عبر الإنترنت - محول صور مجاني إلى PDF",
+    description: "تحويل ملفات الصور (JPG، PNG، BMP، TIFF، GIF، SVG، WebP، HEIF) إلى مستندات PDF",
+    color: "#3498db",
+    type: "image",
+    to: "/image-to-pdf",
+  }
 };
 
 export const web2pdftool: _web2pdftool = {

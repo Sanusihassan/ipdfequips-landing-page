@@ -16,14 +16,14 @@ import OrganizePDFIcon from "../icons/OrganizePDF";
 import { BsFillFileEarmarkWordFill } from "react-icons/bs";
 import { LuFileText, LuLayoutDashboard } from "react-icons/lu";
 import { PiMicrosoftExcelLogo, PiMicrosoftPowerpointLogo } from "react-icons/pi";
-import { FaFilePdf } from "react-icons/fa6";
+import { FaFilePdf, FaImages } from "react-icons/fa6";
 import { CiGlobe } from "react-icons/ci";
 import MarkdownIcon from "../icons/Markdown"
 import StampIcon from "../icons/StampIcon"
 import NumbersIcon from "../icons/Numbers"
 import EditPDFIcon from "pdfequips-navbar/icons/EditPDF";
 import CropIcon from "pdfequips-navbar/icons/CropIcon"
-import AssistantIcon from "pdfequips-navbar/icons/AIIcon"
+// import AssistantIcon from "pdfequips-navbar/icons/AIIcon"
 import AIIcon from "pdfequips-navbar/icons/AIIcon";
 
 export const FeaturesSection = ({
@@ -69,19 +69,27 @@ export const FeaturesSection = ({
       color: tool.Compress_PDF.color as string,
       icon: CompressIcon,
     },
-    {
-      title: tool.PDF_Assistant.title,
-      description: tool.PDF_Assistant.description,
-      to: `${langPath}${tool.PDF_Assistant.to}`,
-      color: tool.PDF_Assistant.color as string,
-      icon: AssistantIcon,
-    },
+    // {
+    //   title: tool.PDF_Assistant.title,
+    //   description: tool.PDF_Assistant.description,
+    //   to: `${langPath}${tool.PDF_Assistant.to}`,
+    //   color: tool.PDF_Assistant.color as string,
+    //   icon: AssistantIcon,
+    // },
+    // add image to pdf
     {
       title: tool.Translate_PDF.title,
       description: tool.Translate_PDF.description,
       to: `${langPath}${tool.Translate_PDF.to}`,
       color: tool.Translate_PDF.color as string,
       icon: TranslateIcon,
+    },
+    {
+      title: tool.Image_to_PDF.title,
+      description: tool.Image_to_PDF.description,
+      to: `${langPath}${tool.Image_to_PDF.to}`,
+      color: tool.Image_to_PDF.color as string,
+      icon: FaImages,
     },
     {
       title: tool.PDF_to_Text.title,
@@ -250,7 +258,7 @@ export const FeaturesSection = ({
               <a
                 href={
                   // "https://3000-sanusihassan-pdfequips-x5kvhyduops.ws-eu107.gitpod.io/" +
-                  first.to + "/"
+                  first.to
                 }
                 className="link"
                 title={first.title}
@@ -285,7 +293,7 @@ export const FeaturesSection = ({
                 <a
                   href={
                     // "https://3000-sanusihassan-pdfequips-x5kvhyduops.ws-eu107.gitpod.io/" +
-                    card.to + "/"
+                    card.to
                   }
                   className="link"
                   title={card.title}

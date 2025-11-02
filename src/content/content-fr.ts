@@ -69,8 +69,8 @@ export const tool: _tool = {
     to: "/compress-pdf",
   },
   Translate_PDF: {
-    title: "Traduire des fichiers PDF et WORD",
-    description: "Traduction précise alimentée par l'IA. Préserve la mise en page et prend en charge plusieurs langues",
+    title: "Traduire les fichiers PDF, WORD et PowerPoint",
+    description: "Traduction précise et complète des documents avec l’IA. Conserve le format et le design, et prend en charge plusieurs langues",
     color: "#185abc",
     type: ".pdf",
     to: "/translate-pdf",
@@ -275,7 +275,14 @@ export const tool: _tool = {
     type: ".pdf",
     to: "/merge-pages",
   },
-
+  Image_to_PDF: {
+    title: "Image vers PDF",
+    seoTitle: "Convertir des images en PDF - Convertisseur gratuit",
+    description: "Convertir des fichiers image (JPG, PNG, BMP, TIFF, GIF, SVG, WebP, HEIF) en documents PDF",
+    color: "#3498db",
+    type: "image",
+    to: "/image-to-pdf",
+  }
 };
 
 export const web2pdftool: _web2pdftool = {
