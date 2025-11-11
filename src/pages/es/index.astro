@@ -10,6 +10,18 @@ import Icons from "../../components/Icons.astro";
 import { ConditionalAdsense } from "../../components/ConditionalAdsense";
 // import Alternatives from "../../components/Alternatives.astro";
 const lang = "es";
+const websiteSchema = {
+	"@context": "http://schema.org",
+	"@type": "WebSite",
+	name: "PDFEquips",
+	url: "https://www.pdfequips.com",
+	description: `PDFEquips es una plataforma gratuita basada en web con una colección de herramientas para gestionar y manipular archivos PDF en línea. Permite a los usuarios realizar diversas operaciones como convertir, combinar, dividir y firmar PDFs, sin necesidad de instalar software de escritorio. El servicio es utilizado por profesionales, estudiantes y empresas para un procesamiento de documentos rápido y eficiente, con énfasis en la seguridad, incluyendo la eliminación automática de archivos después de un tiempo establecido.`,
+	sameAs: [
+		"https://www.facebook.com/pdfequipsfb",
+		"https://twitter.com/PDFEquips",
+		"https://www.linkedin.com/company/pdfequips",
+	],
+};
 ---
 
 <html lang={lang} dir="ltr">
@@ -43,11 +55,7 @@ const lang = "es";
     />
     <Icons />
     <SaveTokenScript />
-    <!-- <script
-			type="application/ld+json"
-			dangerouslySetInnerHTML={{
-				__html: JSON.stringify(websiteSchema),
-			}}></script> -->
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)}></script>
     <meta http-equiv="Content-Language" content={lang} />
     <!-- <Alternatives /> -->
     <meta

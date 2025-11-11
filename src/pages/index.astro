@@ -11,18 +11,18 @@ import Icons from "../components/Icons.astro";
 import { ConditionalAdsense } from "../components/ConditionalAdsense";
 // import Alternatives from "../components/Alternatives.astro";
 const lang = "";
-// const websiteSchema = {
-// 	"@context": "http://schema.org",
-// 	"@type": "WebSite",
-// 	name: "PDFEquips",
-// 	url: "https://www.pdfequips.com",
-// 	description: `Enhance Your Productivity with our Comprehensive PDF Solution. ${allTitlesCombined}. Easy, Fast, and Secure Editing Online.`,
-// 	sameAs: [
-// 		"https://www.facebook.com/pdfequipsfb",
-// 		"https://twitter.com/PDFEquips",
-// 		"https://www.linkedin.com/company/pdfequips",
-// 	],
-// };
+const websiteSchema = {
+	"@context": "http://schema.org",
+	"@type": "WebSite",
+	name: "PDFEquips",
+	url: "https://www.pdfequips.com",
+	description: `PDFEquips is a free, web-based platform with a collection of tools for managing and manipulating PDF files online. It allows users to perform various operations such as converting, merging, splitting, and signing PDFs, without needing to install desktop software. The service is used by professionals, students, and businesses for quick and efficient document processing, with a focus on security, including automatically deleting files after a set time. `,
+	sameAs: [
+		"https://www.facebook.com/pdfequipsfb",
+		"https://twitter.com/PDFEquips",
+		"https://www.linkedin.com/company/pdfequips",
+	],
+};
 ---
 
 <html lang="en">
@@ -52,11 +52,7 @@ const lang = "";
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
-    <!-- <script
-			type="application/ld+json"
-			dangerouslySetInnerHTML={{
-				__html: JSON.stringify(websiteSchema),
-			}}></script> -->
+      <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)}></script>
     <meta http-equiv="Content-Language" content="en" />
     <!-- <Alternatives /> -->
     <Icons />

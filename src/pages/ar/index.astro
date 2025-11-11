@@ -11,6 +11,18 @@ import Icons from "../../components/Icons.astro";
 import { ConditionalAdsense } from "../../components/ConditionalAdsense";
 // import Alternatives from "../../components/Alternatives.astro";
 const lang = "ar";
+const websiteSchema = {
+	"@context": "http://schema.org",
+	"@type": "WebSite",
+	name: "PDFEquips",
+	url: "https://www.pdfequips.com",
+	description: `PDFEquips هي منصة مجانية على الويب تحتوي على مجموعة من الأدوات لإدارة وتعديل ملفات PDF عبر الإنترنت. تتيح للمستخدمين إجراء عمليات متنوعة مثل التحويل، الدمج، التقسيم، وتوقيع ملفات PDF، دون الحاجة إلى تثبيت برامج سطح المكتب. تُستخدم الخدمة من قبل المحترفين والطلاب والشركات لمعالجة المستندات بسرعة وكفاءة، مع التركيز على الأمان، بما في ذلك حذف الملفات تلقائيًا بعد فترة محددة.`,
+	sameAs: [
+		"https://www.facebook.com/pdfequipsfb",
+		"https://twitter.com/PDFEquips",
+		"https://www.linkedin.com/company/pdfequips",
+	],
+};
 ---
 
 <html lang={lang} dir="rtl">
@@ -43,11 +55,7 @@ const lang = "ar";
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
-    <!-- <script
-			type="application/ld+json"
-			dangerouslySetInnerHTML={{
-				__html: JSON.stringify(websiteSchema),
-			}}></script> -->
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)}></script>
     <meta http-equiv="Content-Language" content={lang} />
     <!-- <Alternatives /> -->
     <Icons />

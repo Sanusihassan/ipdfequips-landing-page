@@ -10,6 +10,18 @@ import "../../index.scss";
 import Icons from "../../components/Icons.astro";
 import { ConditionalAdsense } from "../../components/ConditionalAdsense";
 // import Alternatives from "../../components/Alternatives.astro";
+const websiteSchema = {
+	"@context": "http://schema.org",
+	"@type": "WebSite",
+	name: "PDFEquips",
+	url: "https://www.pdfequips.com",
+	description: `PDFEquips est une plateforme gratuite en ligne proposant une collection d'outils pour gérer et manipuler des fichiers PDF. Elle permet aux utilisateurs d'effectuer diverses opérations telles que la conversion, la fusion, la division et la signature de PDFs, sans avoir besoin d'installer de logiciel de bureau. Le service est utilisé par des professionnels, des étudiants et des entreprises pour un traitement de documents rapide et efficace, avec un accent sur la sécurité, y compris la suppression automatique des fichiers après un délai défini.`,
+	sameAs: [
+		"https://www.facebook.com/pdfequipsfb",
+		"https://twitter.com/PDFEquips",
+		"https://www.linkedin.com/company/pdfequips",
+	],
+};
 ---
 
 <html lang={lang} dir="ltr">
@@ -31,7 +43,7 @@ import { ConditionalAdsense } from "../../components/ConditionalAdsense";
     />
     <OpenGraph
       ogDescription="PDFEquips - Outils PDF gratuits | Simplifiez vos besoins PDF avec PDFEquips.com"
-      ogLocale="ar_FR"
+      ogLocale="fr_FR"
       ogImage="https://www.pdfequips.com/pdfequips-fr.png"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -42,11 +54,7 @@ import { ConditionalAdsense } from "../../components/ConditionalAdsense";
     />
     <Icons />
     <SaveTokenScript />
-    <!-- <script
-			type="application/ld+json"
-			dangerouslySetInnerHTML={{
-				__html: JSON.stringify(websiteSchema),
-			}}></script> -->
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)}></script>
     <meta http-equiv="Content-Language" content={lang} />
     <!-- <Alternatives /> -->
     <meta
