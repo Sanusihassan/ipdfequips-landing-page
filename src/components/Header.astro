@@ -1,6 +1,6 @@
 ---
 const { lang } = Astro.props;
-import {HeaderWrapper} from "./HeaderWrapper";
+import { HeaderWrapper } from "./HeaderWrapper";
 ---
 
-<HeaderWrapper />
+<HeaderWrapper client:load lang={lang} />
