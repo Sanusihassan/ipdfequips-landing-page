@@ -1,6 +1,6 @@
 ---
 import { landing_page, tool } from "../content/content";
-import {HeaderWrapper} from "../components/HeaderWrapper";
+import { HeaderWrapper } from "../components/HeaderWrapper";
 import { OpenGraph } from "pdfequips-open-graph/OpenGraph";
 import LandingPage from "../components/LandingPage";
 import { Footer } from "pdfequips-footer/components/Footer";
@@ -12,16 +12,16 @@ import { ConditionalAdsense } from "../components/ConditionalAdsense";
 // import Alternatives from "../components/Alternatives.astro";
 const lang = "";
 const websiteSchema = {
-	"@context": "http://schema.org",
-	"@type": "WebSite",
-	name: "PDFEquips",
-	url: "https://www.pdfequips.com",
-	description: `PDFEquips is a free, web-based platform with a collection of tools for managing and manipulating PDF files online. It allows users to perform various operations such as converting, merging, splitting, and signing PDFs, without needing to install desktop software. The service is used by professionals, students, and businesses for quick and efficient document processing, with a focus on security, including automatically deleting files after a set time. `,
-	sameAs: [
-		"https://www.facebook.com/pdfequipsfb",
-		"https://twitter.com/PDFEquips",
-		"https://www.linkedin.com/company/pdfequips",
-	],
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  name: "PDFEquips",
+  url: "https://www.pdfequips.com",
+  description: `PDFEquips is a free, web-based platform with a collection of tools for managing and manipulating PDF files online. It allows users to perform various operations such as converting, merging, splitting, and signing PDFs, without needing to install desktop software. The service is used by professionals, students, and businesses for quick and efficient document processing, with a focus on security, including automatically deleting files after a set time. `,
+  sameAs: [
+    "https://www.facebook.com/pdfequipsfb",
+    "https://twitter.com/PDFEquips",
+    "https://www.linkedin.com/company/pdfequips",
+  ],
 };
 ---
 
@@ -52,7 +52,10 @@ const websiteSchema = {
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
-      <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)}></script>
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(websiteSchema)}
+    />
     <meta http-equiv="Content-Language" content="en" />
     <!-- <Alternatives /> -->
     <Icons />
@@ -65,12 +68,18 @@ const websiteSchema = {
   <body>
     <ConditionalAdsense client:load />
     <HeaderWrapper client:load lang={lang} />
-    <LandingPage landing_page={landing_page} tool={tool} lang={lang} />
+    <LandingPage
+      landing_page={landing_page}
+      tool={tool}
+      lang={lang}
+      client:load
+    />
     <Footer
       lang={lang}
       includeTools={false}
       title="Free Online PDF Tools"
       includeTools={false}
+      client:load
     />
   </body>
 </html>

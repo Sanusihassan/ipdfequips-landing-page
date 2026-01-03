@@ -11,16 +11,16 @@ import Icons from "../../components/Icons.astro";
 import { ConditionalAdsense } from "../../components/ConditionalAdsense";
 // import Alternatives from "../../components/Alternatives.astro";
 const websiteSchema = {
-	"@context": "http://schema.org",
-	"@type": "WebSite",
-	name: "PDFEquips",
-	url: "https://www.pdfequips.com",
-	description: `PDFEquips est une plateforme gratuite en ligne proposant une collection d'outils pour gérer et manipuler des fichiers PDF. Elle permet aux utilisateurs d'effectuer diverses opérations telles que la conversion, la fusion, la division et la signature de PDFs, sans avoir besoin d'installer de logiciel de bureau. Le service est utilisé par des professionnels, des étudiants et des entreprises pour un traitement de documents rapide et efficace, avec un accent sur la sécurité, y compris la suppression automatique des fichiers après un délai défini.`,
-	sameAs: [
-		"https://www.facebook.com/pdfequipsfb",
-		"https://twitter.com/PDFEquips",
-		"https://www.linkedin.com/company/pdfequips",
-	],
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  name: "PDFEquips",
+  url: "https://www.pdfequips.com",
+  description: `PDFEquips est une plateforme gratuite en ligne proposant une collection d'outils pour gérer et manipuler des fichiers PDF. Elle permet aux utilisateurs d'effectuer diverses opérations telles que la conversion, la fusion, la division et la signature de PDFs, sans avoir besoin d'installer de logiciel de bureau. Le service est utilisé par des professionnels, des étudiants et des entreprises pour un traitement de documents rapide et efficace, avec un accent sur la sécurité, y compris la suppression automatique des fichiers après un délai défini.`,
+  sameAs: [
+    "https://www.facebook.com/pdfequipsfb",
+    "https://twitter.com/PDFEquips",
+    "https://www.linkedin.com/company/pdfequips",
+  ],
 };
 ---
 
@@ -54,7 +54,10 @@ const websiteSchema = {
     />
     <Icons />
     <SaveTokenScript />
-    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)}></script>
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(websiteSchema)}
+    />
     <meta http-equiv="Content-Language" content={lang} />
     <!-- <Alternatives /> -->
     <meta
@@ -65,11 +68,17 @@ const websiteSchema = {
   <body>
     <ConditionalAdsense client:load />
     <Header lang={lang} />
-    <LandingPage landing_page={landing_page} tool={tool} lang={lang} />
+    <LandingPage
+      landing_page={landing_page}
+      tool={tool}
+      lang={lang}
+      client:load
+    />
     <Footer
       lang={lang}
       includeTools={false}
       title="Outils PDF en ligne gratuits"
+      client:load
     />
   </body>
 </html>

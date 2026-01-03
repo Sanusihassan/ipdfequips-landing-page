@@ -10,16 +10,16 @@ import "../../index.scss";
 import Icons from "../../components/Icons.astro";
 import { ConditionalAdsense } from "../../components/ConditionalAdsense";
 const websiteSchema = {
-	"@context": "http://schema.org",
-	"@type": "WebSite",
-	name: "PDFEquips",
-	url: "https://www.pdfequips.com",
-	description: `PDFEquips एक मुफ़्त, वेब-आधारित प्लेटफ़ॉर्म है जिसमें ऑनलाइन PDF फ़ाइलों को प्रबंधित और संपादित करने के लिए उपकरणों का संग्रह है। यह उपयोगकर्ताओं को कन्वर्ट करना, मर्ज करना, विभाजित करना और PDF पर हस्ताक्षर करना जैसी विभिन्न क्रियाएँ करने की अनुमति देता है, बिना डेस्कटॉप सॉफ़्टवेयर इंस्टॉल किए। यह सेवा पेशेवरों, छात्रों और व्यवसायों द्वारा तेज़ और कुशल दस्तावेज़ प्रसंस्करण के लिए उपयोग की जाती है, जिसमें सुरक्षा पर ध्यान दिया जाता है, जिसमें निर्धारित समय के बाद फ़ाइलों को स्वचालित रूप से हटाना शामिल है।`,
-	sameAs: [
-		"https://www.facebook.com/pdfequipsfb",
-		"https://twitter.com/PDFEquips",
-		"https://www.linkedin.com/company/pdfequips",
-	],
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  name: "PDFEquips",
+  url: "https://www.pdfequips.com",
+  description: `PDFEquips एक मुफ़्त, वेब-आधारित प्लेटफ़ॉर्म है जिसमें ऑनलाइन PDF फ़ाइलों को प्रबंधित और संपादित करने के लिए उपकरणों का संग्रह है। यह उपयोगकर्ताओं को कन्वर्ट करना, मर्ज करना, विभाजित करना और PDF पर हस्ताक्षर करना जैसी विभिन्न क्रियाएँ करने की अनुमति देता है, बिना डेस्कटॉप सॉफ़्टवेयर इंस्टॉल किए। यह सेवा पेशेवरों, छात्रों और व्यवसायों द्वारा तेज़ और कुशल दस्तावेज़ प्रसंस्करण के लिए उपयोग की जाती है, जिसमें सुरक्षा पर ध्यान दिया जाता है, जिसमें निर्धारित समय के बाद फ़ाइलों को स्वचालित रूप से हटाना शामिल है।`,
+  sameAs: [
+    "https://www.facebook.com/pdfequipsfb",
+    "https://twitter.com/PDFEquips",
+    "https://www.linkedin.com/company/pdfequips",
+  ],
 };
 ---
 
@@ -52,7 +52,10 @@ const websiteSchema = {
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
-    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)}></script>
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(websiteSchema)}
+    />
     <meta http-equiv="Content-Language" content={lang} />
     <!-- <Alternatives /> -->
     <Icons />
@@ -65,7 +68,17 @@ const websiteSchema = {
   <body>
     <ConditionalAdsense client:load />
     <Header lang={lang} />
-    <LandingPage landing_page={landing_page} tool={tool} lang={lang} />
-    <Footer lang={lang} includeTools={false} title="मुफ्त ऑनलाइन PDF उपकरण" />
+    <LandingPage
+      landing_page={landing_page}
+      tool={tool}
+      lang={lang}
+      client:load
+    />
+    <Footer
+      lang={lang}
+      includeTools={false}
+      title="मुफ्त ऑनलाइन PDF उपकरण"
+      client:load
+    />
   </body>
 </html>

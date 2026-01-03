@@ -10,16 +10,16 @@ import "../../index.scss";
 import Icons from "../../components/Icons.astro";
 import { ConditionalAdsense } from "../../components/ConditionalAdsense";
 const websiteSchema = {
-	"@context": "http://schema.org",
-	"@type": "WebSite",
-	name: "PDFEquips",
-	url: "https://www.pdfequips.com",
-	description: `PDFEquips 是一个免费的基于网络的平台，提供一系列在线管理与操作 PDF 文件的工具。用户无需安装桌面软件，即可执行转换、合并、拆分、签名等多种操作。该服务被专业人士、学生和企业用于快速高效的文档处理，注重安全性，包括在设定时间后自动删除文件。`,
-	sameAs: [
-		"https://www.facebook.com/pdfequipsfb",
-		"https://twitter.com/PDFEquips",
-		"https://www.linkedin.com/company/pdfequips",
-	],
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  name: "PDFEquips",
+  url: "https://www.pdfequips.com",
+  description: `PDFEquips 是一个免费的基于网络的平台，提供一系列在线管理与操作 PDF 文件的工具。用户无需安装桌面软件，即可执行转换、合并、拆分、签名等多种操作。该服务被专业人士、学生和企业用于快速高效的文档处理，注重安全性，包括在设定时间后自动删除文件。`,
+  sameAs: [
+    "https://www.facebook.com/pdfequipsfb",
+    "https://twitter.com/PDFEquips",
+    "https://www.linkedin.com/company/pdfequips",
+  ],
 };
 ---
 
@@ -54,7 +54,10 @@ const websiteSchema = {
     />
     <Icons />
     <SaveTokenScript />
-    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)}></script>
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(websiteSchema)}
+    />
     <meta http-equiv="Content-Language" content={lang} />
     <!-- <Alternatives /> -->
     <meta
@@ -65,7 +68,17 @@ const websiteSchema = {
   <body>
     <ConditionalAdsense client:load />
     <Header lang={lang} />
-    <LandingPage landing_page={landing_page} tool={tool} lang={lang} />
-    <Footer lang={lang} includeTools={false} title="免费在线PDF工具" />
+    <LandingPage
+      landing_page={landing_page}
+      tool={tool}
+      lang={lang}
+      client:load
+    />
+    <Footer
+      lang={lang}
+      includeTools={false}
+      title="免费在线PDF工具"
+      client:load
+    />
   </body>
 </html>
