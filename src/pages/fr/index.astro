@@ -9,7 +9,7 @@ import SaveTokenScript from "../../components/SaveTokenScript.astro";
 import "../../index.scss";
 import Icons from "../../components/Icons.astro";
 import { ConditionalAdsense } from "../../components/ConditionalAdsense";
-// import Alternatives from "../../components/Alternatives.astro";
+import Alternatives from "../../components/Alternatives.astro";
 const websiteSchema = {
   "@context": "http://schema.org",
   "@type": "WebSite",
@@ -59,7 +59,8 @@ const websiteSchema = {
       set:html={JSON.stringify(websiteSchema)}
     />
     <meta http-equiv="Content-Language" content={lang} />
-    <!-- <Alternatives /> -->
+    <link rel="canonical" href="https://www.pdfequips.com/fr/" />
+    <Alternatives />
     <meta
       name="ahrefs-site-verification"
       content="a532671b5b7f09bad30e7e65542ecf2f8f28a1ef5a25b2bec358924427540367"
