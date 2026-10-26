@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 import pwa from '@vite-pwa/astro';
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   integrations: [react(),
@@ -50,6 +51,7 @@ export default defineConfig({
   ],
   site: "https://www.pdfequips.com",
   vite: {
+    plugins: [tailwindcss()],
     ssr: {
       noExternal: ['react-icons']
     }
