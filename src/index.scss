@@ -43,7 +43,8 @@ $color-map: (
   "crop-pdf": #2d98da,
   "assistant": #38ada9,
   "merge-pages": #27ae60,
-  "image-to-pdf": #3498db
+  "image-to-pdf": #3498db,
+  "pdf-forms": #5f27cd,
 );
 
 :root {
@@ -64,8 +65,7 @@ body {
     text-align: right !important;
   }
 
-  font-family: "Raleway",
-  sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .tools-page {
@@ -124,7 +124,6 @@ a.dropdown-item {
   }
 }
 
-
 /* landing page layout */
 
 @import "./scss/landing-page";
@@ -136,7 +135,6 @@ a.dropdown-item {
 /* tools page */
 
 .dropdown-item {
-
   &.active,
   &:active {
     background-color: initial !important;
@@ -182,7 +180,9 @@ a.dropdown-item {
       width: unset;
 
       &.copyright-row {
-        @include extend("col-6 col-md-6 m-0 p-0 row align-items-center flex-nowrap mb-xs-3");
+        @include extend(
+          "col-6 col-md-6 m-0 p-0 row align-items-center flex-nowrap mb-xs-3"
+        );
       }
 
       &.terms-col {
@@ -195,7 +195,9 @@ a.dropdown-item {
     @include extend("list-unstyled list-group");
 
     .link {
-      @include extend("list-group-item list-group-item-action border-0 px-2 py-2");
+      @include extend(
+        "list-group-item list-group-item-action border-0 px-2 py-2"
+      );
     }
   }
 }
