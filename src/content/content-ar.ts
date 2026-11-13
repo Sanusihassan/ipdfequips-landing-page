@@ -259,6 +259,14 @@ export const tool: _tool = {
     type: ".pdf",
     to: "/edit-pdf",
   },
+  PDF_Forms: {
+    title: "إنشاء PDF قابل للتعبئة",
+    description: "حوّل أي ملف PDF إلى نموذج قابل للتعبئة. يكتشف الذكاء الاصطناعي الحقول، أو أضف مربعات النص وخانات الاختيار وحقول التوقيع بنفسك.",
+    color: "#5f27cd",
+    type: ".pdf",
+    to: "/pdf-forms",
+    badge: "جديد",
+  },
   Crop_PDF: {
     title: "اقتصاص PDF",
     description: "قم بقص صفحات PDF بسهولة لإبراز المحتوى المهم.",

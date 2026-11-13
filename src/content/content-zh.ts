@@ -252,6 +252,14 @@ export const tool: _tool = {
     type: ".pdf",
     to: "/edit-pdf",
   },
+  PDF_Forms: {
+    title: "制作可填写的PDF",
+    description: "将任意 PDF 变成可填写的表单。AI 自动识别字段，您也可以自行添加文本框、复选框和签名字段。",
+    color: "#5f27cd",
+    type: ".pdf",
+    to: "/pdf-forms",
+    badge: "新",
+  },
   Crop_PDF: {
     title: "裁剪 PDF",
     description: "轻松裁剪 PDF 页面，以突出显示重要内容。",

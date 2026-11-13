@@ -259,6 +259,14 @@ export const tool: _tool = {
     type: ".pdf",
     to: "/edit-pdf",
   },
+  PDF_Forms: {
+    title: "Crear PDF rellenable",
+    description: "Convierte cualquier PDF en un formulario rellenable. La IA detecta los campos, o añade cuadros de texto, casillas y firmas tú mismo.",
+    color: "#5f27cd",
+    type: ".pdf",
+    to: "/pdf-forms",
+    badge: "Nuevo",
+  },
   Crop_PDF: {
     title: "Recortar PDF",
     description: "Recorta fácilmente tus páginas PDF para resaltar el contenido esencial.",

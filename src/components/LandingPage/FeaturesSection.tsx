@@ -25,6 +25,16 @@ import EditPDFIcon from "pdfequips-navbar/icons/EditPDF";
 import CropIcon from "pdfequips-navbar/icons/CropIcon"
 // import AssistantIcon from "pdfequips-navbar/icons/AIIcon"
 import AIIcon from "pdfequips-navbar/icons/AIIcon";
+import { RxInput } from "react-icons/rx";
+
+type FeatureCard = {
+  title: string;
+  description: string;
+  to: string;
+  color: string;
+  icon: React.ElementType;
+  badge?: string; // small label on the card, e.g. "New"
+};
 
 export const FeaturesSection = ({
   tool,
@@ -47,13 +57,21 @@ export const FeaturesSection = ({
     color: tool.Merge_PDF.color as string,
     icon: DocumentDuplicateIcon,
   };
-  const featureCards = [
+  const featureCards: FeatureCard[] = [
     {
       title: tool.Edit_PDF.title,
       description: tool.Edit_PDF.description,
       to: `${langPath}${tool.Edit_PDF.to}`,
       color: tool.Edit_PDF.color as string,
       icon: EditPDFIcon
+    },
+    {
+      title: tool.PDF_Forms.title,
+      description: tool.PDF_Forms.description,
+      to: `${langPath}${tool.PDF_Forms.to}`,
+      color: tool.PDF_Forms.color,
+      icon: RxInput,
+      badge: tool.PDF_Forms.badge,
     },
     {
       title: tool.Split_PDF.title,
@@ -302,6 +320,14 @@ export const FeaturesSection = ({
                 // }}
                 >
                   <div className={`feature-card card ${card.to.replace(regex, "")}`}>
+                    {card.badge && (
+                      <span
+                        className="absolute end-3 top-3 rounded-full px-2.5 py-0.5 text-xs font-semibold text-white"
+                        style={{ backgroundColor: card.color }}
+                      >
+                        {card.badge}
+                      </span>
+                    )}
                     <div className="feature-icon">
                       {React.createElement(card.icon as FunctionComponent<{ className: string; style: { [x: string]: string; }; }>, {
                         className: "h6 w6",

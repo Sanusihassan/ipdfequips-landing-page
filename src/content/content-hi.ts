@@ -258,6 +258,14 @@ export const tool: _tool = {
     type: ".pdf",
     to: "/edit-pdf",
   },
+  PDF_Forms: {
+    title: "PDF को भरने योग्य बनाएं",
+    description: "किसी भी PDF को भरने योग्य फ़ॉर्म में बदलें। AI फ़ील्ड पहचानता है, या टेक्स्ट बॉक्स, चेकबॉक्स और सिग्नेचर फ़ील्ड खुद जोड़ें।",
+    color: "#5f27cd",
+    type: ".pdf",
+    to: "/pdf-forms",
+    badge: "नया",
+  },
   Crop_PDF: {
     title: "पीडीएफ क्रॉप करें",
     description: "आवश्यक सामग्री को हाइलाइट करने के लिए अपने PDF पृष्ठों को आसानी से क्रॉप करें।",

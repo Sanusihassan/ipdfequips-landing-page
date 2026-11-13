@@ -254,6 +254,14 @@ export const tool: _tool = {
     type: ".pdf",
     to: "/edit-pdf",
   },
+  PDF_Forms: {
+    title: "Créer un PDF remplissable",
+    description: "Transformez tout PDF en formulaire remplissable. L'IA détecte les champs, ou ajoutez vous-même zones de texte, cases à cocher et signatures.",
+    color: "#5f27cd",
+    type: ".pdf",
+    to: "/pdf-forms",
+    badge: "Nouveau",
+  },
   Crop_PDF: {
     title: "Rogner PDF",
     description: "Rognez facilement vos pages PDF pour mettre en avant le contenu essentiel.",

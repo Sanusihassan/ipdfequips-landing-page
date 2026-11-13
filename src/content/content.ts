@@ -266,6 +266,14 @@ export const tool = {
     type: ".pdf",
     to: "/edit-pdf",
   },
+  PDF_Forms: {
+    title: "Make PDF Fillable",
+    description: "Turn any PDF into a fillable form. AI detects the fields, or add text boxes, checkboxes and signature fields yourself.",
+    color: "#5f27cd",
+    type: ".pdf",
+    to: "/pdf-forms",
+    badge: "New",
+  },
   Crop_PDF: {
     title: "Crop PDF",
     description: "Easily crop and trim your PDF pages to highlight essential content.",
