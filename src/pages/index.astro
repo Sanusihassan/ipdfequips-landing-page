@@ -11,6 +11,7 @@ import Analytics from "../components/Analytics.astro";
 import Icons from "../components/Icons.astro";
 import { ConditionalAdsense } from "../components/ConditionalAdsense";
 import Alternatives from "../components/Alternatives.astro";
+import MetaPixel from "../components/MetaPixel.astro";
 const lang = "";
 const websiteSchema = {
   "@context": "http://schema.org",
@@ -44,9 +45,7 @@ const websiteSchema = {
       content="PDF tools, Convert to PDF, JPG to PDF, WORD to PDF, POWERPOINT to PDF, EXCEL to PDF, HTML to PDF, Convert from PDF, PDF to JPG, PDF to WORD, PDF to POWERPOINT, PDF to EXCEL, PDF to PDF/A, PDF to text, Merge PDF, Compress PDF."
     />
     <Analytics />
-    <OpenGraph
-      ogDescription="PDFEquips - Free PDF Tools | Simplify Your PDF Needs with PDFEquips.com"
-    />
+    <OpenGraph ogDescription="PDFEquips - Free PDF Tools | Simplify Your PDF Needs with PDFEquips.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" cross-origin="" />
     <link
@@ -59,6 +58,7 @@ const websiteSchema = {
     />
     <meta http-equiv="Content-Language" content="en" />
     <link rel="canonical" href="https://www.pdfequips.com/" />
+    <MetaPixel />
     <Alternatives />
     <Icons />
     <SaveTokenScript />
@@ -70,11 +70,7 @@ const websiteSchema = {
   <body>
     <ConditionalAdsense client:load />
     <HeaderWrapper client:load lang={lang} />
-    <LandingPage
-      landing_page={landing_page}
-      tool={tool}
-      lang={lang}
-    />
+    <LandingPage landing_page={landing_page} tool={tool} lang={lang} />
     <Footer
       lang={lang}
       includeTools={false}
